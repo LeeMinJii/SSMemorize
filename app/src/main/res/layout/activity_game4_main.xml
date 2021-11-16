@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginLeft="25dp"
+        android:background="@drawable/round_dark"
+        android:text="   단어 암기 게임"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/white"
+        android:drawableLeft="@drawable/tab2_game"
+        android:paddingLeft="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="객관식 게임"
+        android:textSize="30dp"
+        android:textColor="@color/dark"
+        android:backgroundTint="@color/gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="🏆 최고기록 : 100"
+        android:textSize="20dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="주관식 게임"
+        android:textSize="30dp"
+        android:textColor="@color/dark"
+        android:backgroundTint="@color/gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="right"
+        android:layout_marginRight="30dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:text="🏆 최고기록 : 100"
+        android:textSize="20dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:text="카드 게임"
+        android:textSize="30dp"
+        android:textColor="@color/dark"
+        android:backgroundTint="@color/gray"/>
+</LinearLayout>

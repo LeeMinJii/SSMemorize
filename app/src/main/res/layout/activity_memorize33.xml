@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/show_day"
+        android:layout_below="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Day 01"
+        android:textSize="20dp"
+        android:textColor="@color/dark"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:id="@+id/word_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/show_day"
+        android:text="3/20"
+        android:textSize="30dp"
+        android:gravity="right"
+        android:layout_marginRight="30dp"/>
+
+    <FrameLayout
+        android:id="@+id/Flayout_card"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/word_num"
+        android:background="@color/dark" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="사과"
+            android:textSize="50dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:visibility="visible"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:text="apple"
+            android:textSize="50dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:visibility="invisible"/>
+    </FrameLayout>
+
+    <CheckBox
+        android:id="@+id/check_add_myword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Flayout_card"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text=" 내 단어장에 추가"
+        android:textSize="25dp"
+        android:layout_marginTop="30dp"/>
+
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/check_add_myword"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text=" 암기 완료"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp"/>
+
+
+</RelativeLayout>

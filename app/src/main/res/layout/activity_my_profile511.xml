@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <Button
+        android:id="@+id/myprofile_goal"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:backgroundTint="@color/white"
+        android:text="✒ 이번 달 목표 : "
+        android:textColor="@color/dark"
+        android:textSize="17dp"
+        android:layout_below="@+id/btn_back"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"
+        android:layout_marginTop="20dp"/>
+    <Button
+        android:id="@+id/myprofile_memo"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:backgroundTint="@color/white"
+        android:text="📃 한 줄 메모 : "
+        android:textColor="@color/dark"
+        android:textSize="17dp"
+        android:layout_below="@+id/myprofile_goal"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/tmp_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/myprofile_memo"
+        android:text="출석체크"
+        android:textSize="25dp"
+        android:textColor="@color/dark"
+        android:background="@drawable/thin_gray"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"/>
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tmp_view"
+        android:layout_marginTop="10dp"/>
+</RelativeLayout>

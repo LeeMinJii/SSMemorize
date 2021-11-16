@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/Llayout_finish"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/btn_back"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/thin_gray">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="카드 게임"
+            android:textSize="35dp"
+            android:textColor="@color/black"
+            android:layout_weight="2.5"
+            android:gravity="center_vertical|bottom"
+            android:paddingLeft="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="총 단어 8쌍"
+            android:textSize="20dp"
+            android:textColor="@color/darkgray"
+            android:layout_weight="0.5"
+            android:gravity="center_vertical|bottom"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="한글 뜻에 해당하는 영어를 순서대로 눌러 카드를 없애주세요!"
+            android:textSize="20dp"
+            android:textColor="@color/darkgray"
+            android:layout_weight="2"
+            android:gravity="center_vertical|top"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/Llayout_finish"
+        android:text="게임 시작"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+</RelativeLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back"
+        android:background="@color/white"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"/>
+
+    <TextView
+        android:id="@+id/show_day"
+        android:layout_below="@+id/btn_back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_weight="0"
+        android:text="Day 01"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="35dp"
+        android:background="@drawable/round_dark"/>
+
+    <LinearLayout
+        android:id="@+id/Llayout_finish"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/show_day"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="130dp"
+        android:background="@drawable/thin_gray">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="암기 완료!"
+            android:textSize="30dp"
+            android:textColor="#FF0000"
+            android:layout_weight="2"
+            android:gravity="center_vertical|bottom"
+            android:paddingLeft="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="다시 암기하고 싶으시면 종료 후 리셋 버튼을 눌려주세요."
+            android:textSize="20dp"
+            android:textColor="@color/darkgray"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"/>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/Llayout_finish"
+        android:text="종료"
+        android:textColor="@color/dark"
+        android:textSize="15dp"
+        android:backgroundTint="@color/gray"/>
+</RelativeLayout>
