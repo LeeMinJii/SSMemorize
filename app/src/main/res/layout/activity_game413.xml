@@ -37,7 +37,8 @@
         android:text="tiger"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:backgroundTint="@color/dark"/>
     <Button
         android:id="@+id/game1_content2"
         android:layout_width="match_parent"
@@ -49,7 +50,8 @@
         android:text="holiday"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:backgroundTint="@color/dark"/>
     <Button
         android:id="@+id/game1_content3"
         android:layout_width="match_parent"
@@ -61,7 +63,8 @@
         android:text="beach"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:backgroundTint="@color/dark"/>
     <Button
         android:id="@+id/game1_content4"
         android:layout_width="match_parent"
@@ -73,5 +76,6 @@
         android:text="handshake"
         android:textColor="@color/white"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:backgroundTint="@color/dark"/>
 </RelativeLayout>

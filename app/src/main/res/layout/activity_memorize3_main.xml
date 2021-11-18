@@ -46,7 +46,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="6.7"
                 android:gravity="center_vertical"
                 android:text="초등 영단어"
                 android:textStyle="bold"
@@ -54,17 +54,32 @@
                 android:textSize="24dp"
                 android:paddingLeft="15dp"/>
 
-            <Button
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5"
                 android:background="@drawable/round_dark"
-                android:drawableRight="@drawable/study"
-                android:text="학습하기"
-                android:textSize="10dp"
-                android:textStyle="bold" />
+                android:layout_margin="3dp">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:text="학습하기"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_dark"
+                    android:gravity="right|center_vertical"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/study"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -280,7 +295,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="6.7"
                 android:gravity="center_vertical"
                 android:text="중등 영단어"
                 android:textStyle="bold"
@@ -288,17 +303,32 @@
                 android:textSize="24dp"
                 android:paddingLeft="15dp"/>
 
-            <Button
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5"
                 android:background="@drawable/round_dark"
-                android:drawableRight="@drawable/study"
-                android:text="학습하기"
-                android:textSize="10dp"
-                android:textStyle="bold" />
+                android:layout_margin="3dp">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:text="학습하기"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_dark"
+                    android:gravity="right|center_vertical"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/study"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -513,7 +543,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="6.7"
                 android:gravity="center_vertical"
                 android:text="수능 영단어"
                 android:textStyle="bold"
@@ -521,17 +551,32 @@
                 android:textSize="24dp"
                 android:paddingLeft="15dp"/>
 
-            <Button
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5"
                 android:background="@drawable/round_dark"
-                android:drawableRight="@drawable/study"
-                android:text="학습하기"
-                android:textSize="10dp"
-                android:textStyle="bold" />
+                android:layout_margin="3dp">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:text="학습하기"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_dark"
+                    android:gravity="right|center_vertical"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/study"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -747,7 +792,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="6.7"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:text="토익 영단어"
@@ -755,17 +800,32 @@
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
-            <Button
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5"
                 android:background="@drawable/round_dark"
-                android:drawableRight="@drawable/study"
-                android:text="학습하기"
-                android:textSize="10dp"
-                android:textStyle="bold" />
+                android:layout_margin="3dp">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:text="학습하기"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_dark"
+                    android:gravity="right|center_vertical"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/study"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -981,7 +1041,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="6.7"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:text="여행 회화"
@@ -989,17 +1049,32 @@
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
-            <Button
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5"
                 android:background="@drawable/round_dark"
-                android:drawableRight="@drawable/study"
-                android:text="학습하기"
-                android:textSize="10dp"
-                android:textStyle="bold" />
+                android:layout_margin="3dp">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:text="학습하기"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_dark"
+                    android:gravity="right|center_vertical"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/study"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -1215,7 +1290,7 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="7"
+                android:layout_weight="6.7"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:text="비지니스 회화"
@@ -1223,17 +1298,32 @@
                 android:textSize="24dp"
                 android:textStyle="bold" />
 
-            <Button
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="3"
-                android:layout_marginTop="4dp"
-                android:layout_marginRight="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5"
                 android:background="@drawable/round_dark"
-                android:drawableRight="@drawable/study"
-                android:text="학습하기"
-                android:textSize="10dp"
-                android:textStyle="bold" />
+                android:layout_margin="3dp">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.5"
+                    android:text="학습하기"
+                    android:textSize="10dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/round_dark"
+                    android:gravity="right|center_vertical"/>
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:src="@drawable/study"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
