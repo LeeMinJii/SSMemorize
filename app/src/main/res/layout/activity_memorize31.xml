@@ -29,7 +29,8 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="5dp"
         android:paddingLeft="35dp"
-        android:background="@drawable/round_dark"/>
+        android:background="@drawable/round_dark"
+        android:fontFamily="@font/cafe"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -54,7 +55,8 @@
             android:textStyle="bold"
             android:textSize="25dp"
             android:textColor="@color/dark"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:fontFamily="@font/cafe"/>
         <Spinner
             android:layout_width="0dp"
             android:layout_height="match_parent"

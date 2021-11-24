@@ -27,7 +27,8 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:paddingLeft="35dp"
-        android:background="@drawable/round_dark"/>
+        android:background="@drawable/round_dark"
+        android:fontFamily="@font/cafe"/>
 
     <LinearLayout
         android:id="@+id/Llayout_finish"
@@ -49,29 +50,32 @@
             android:textColor="#FF0000"
             android:layout_weight="2"
             android:gravity="center_vertical|bottom"
-            android:paddingLeft="30dp"/>
+            android:paddingLeft="30dp"
+            android:fontFamily="@font/cafe"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="다시 암기하고 싶으시면 종료 후 리셋 버튼을 눌려주세요."
+            android:text="다시 암기하고 싶으시면 종료 후        리셋 버튼을 눌려주세요."
             android:textSize="20dp"
             android:textColor="@color/darkgray"
             android:layout_weight="3"
             android:gravity="center_vertical"
             android:paddingLeft="30dp"
-            android:paddingRight="30dp"/>
+            android:paddingRight="30dp"
+            android:fontFamily="@font/cafe"/>
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/Llayout_finish"
         android:text="종료"
         android:textColor="@color/dark"
-        android:textSize="15dp"
-        android:backgroundTint="@color/gray"/>
+        android:textSize="20dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/cafe"/>
 </RelativeLayout>

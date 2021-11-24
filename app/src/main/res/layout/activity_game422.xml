@@ -33,18 +33,20 @@
             android:textColor="@color/black"
             android:layout_weight="2.5"
             android:gravity="center_vertical|bottom"
-            android:paddingLeft="30dp"/>
+            android:paddingLeft="30dp"
+            android:fontFamily="@font/cafe"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="총점 100점, 10문제"
+            android:text="[ 총점 100점, 10문제 ]"
             android:textSize="20dp"
             android:textColor="@color/darkgray"
             android:layout_weight="0.5"
             android:gravity="center_vertical|bottom"
             android:paddingLeft="30dp"
-            android:paddingRight="30dp"/>
+            android:paddingRight="30dp"
+            android:fontFamily="@font/cafe"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,19 +56,21 @@
             android:layout_weight="2"
             android:gravity="center_vertical|top"
             android:paddingLeft="30dp"
-            android:paddingRight="30dp"/>
+            android:paddingRight="30dp"
+            android:fontFamily="@font/cafe"/>
     </LinearLayout>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="25dp"
         android:layout_below="@+id/Llayout_finish"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="@color/dark"
         android:text="게임 시작"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:backgroundTint="@color/dark"/>
+        android:fontFamily="@font/cafe"/>
 </RelativeLayout>

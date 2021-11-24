@@ -11,4 +11,5 @@
     <color name="dark">#FF343434</color>
     <color name="gray">#FFF0F0F0</color>
     <color name="darkgray">#FF808080</color>
+    <color name="darkdarkgray">#FF474A51</color>
 </resources>

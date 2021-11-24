@@ -21,7 +21,6 @@
         android:layout_weight="1"
         android:text="  회원가입"
         android:textSize="25dp"
-        android:textStyle="bold"
         android:textColor="@color/white"
         android:gravity="center_vertical"
         android:layout_marginTop="20dp"
@@ -30,7 +29,8 @@
         android:layout_marginBottom="5dp"
         android:paddingLeft="25dp"
         android:background="@drawable/round_dark"
-        android:drawableLeft="@drawable/person"/>
+        android:drawableLeft="@drawable/person"
+        android:fontFamily="@font/cafe"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -43,7 +43,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="25dp"
         android:drawableLeft="@drawable/arrow"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cafe"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -52,7 +53,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:hint="이름을 입력해주세요."
-        android:paddingLeft="50dp" />
+        android:paddingLeft="50dp"
+        android:fontFamily="@font/cafe_air"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -65,7 +67,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="25dp"
         android:drawableLeft="@drawable/arrow"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cafe"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -75,7 +78,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:hint="이메일을 입력해주세요."
-        android:paddingLeft="50dp"/>
+        android:paddingLeft="50dp"
+        android:fontFamily="@font/cafe_air"/>
 
     <Button
         android:layout_width="100dp"
@@ -86,7 +90,8 @@
         android:text="중복확인"
         android:textSize="15dp"
         android:textColor="@color/darkgray"
-        android:backgroundTint="#F0F0F0"/>
+        android:backgroundTint="#F0F0F0"
+        android:fontFamily="@font/cafe"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -99,7 +104,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="25dp"
         android:layout_marginTop="10dp"
-        android:drawableLeft="@drawable/arrow"/>
+        android:drawableLeft="@drawable/arrow"
+        android:fontFamily="@font/cafe"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -109,7 +115,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:hint="비밀번호를 입력해주세요."
-        android:paddingLeft="50dp"/>
+        android:paddingLeft="50dp"
+        android:fontFamily="@font/cafe_air"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -122,7 +129,8 @@
         android:gravity="center_vertical"
         android:paddingLeft="25dp"
         android:drawableLeft="@drawable/arrow"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/cafe"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -131,7 +139,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:hint="비밀번호 확인"
-        android:paddingLeft="50dp"/>
+        android:paddingLeft="50dp"
+        android:fontFamily="@font/cafe_air"/>
 
     <Button
         android:layout_width="match_parent"
@@ -143,6 +152,7 @@
         android:text="완료"
         android:textSize="17dp"
         android:textColor="@color/dark"
-        android:backgroundTint="#F0F0F0"/>
+        android:backgroundTint="#F0F0F0"
+        android:fontFamily="@font/cafe"/>
 
 </LinearLayout>

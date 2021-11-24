@@ -21,7 +21,8 @@
         android:gravity="center_vertical"
         android:textColor="@color/white"
         android:drawableLeft="@drawable/tab1_word"
-        android:paddingLeft="20dp"/>
+        android:paddingLeft="20dp"
+        android:fontFamily="@font/cafe"/>
 
 
     <LinearLayout
@@ -34,7 +35,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:weightSum="5"
-        android:background="@drawable/round_gray">
+        android:background="@drawable/thin_gray">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,7 +53,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/dark"
                 android:textSize="24dp"
-                android:paddingLeft="15dp"/>
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/cafe"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -71,7 +73,8 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:background="@drawable/round_dark"
-                    android:gravity="right|center_vertical"/>
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/cafe"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -97,7 +100,9 @@
                 android:layout_weight="2"
                 android:text="학습률"
                 android:gravity="center|top"
-                android:textColor="@color/black"/>
+                android:paddingLeft="7dp"
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
 
             <View
                 android:layout_width="0dp"
@@ -267,7 +272,8 @@
                 android:text="100%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/black"/>
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
 
         </LinearLayout>
 
@@ -283,7 +289,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:weightSum="5"
-        android:background="@drawable/round_gray">
+        android:background="@drawable/thin_gray">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -301,7 +307,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/dark"
                 android:textSize="24dp"
-                android:paddingLeft="15dp"/>
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/cafe"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -320,7 +327,8 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:background="@drawable/round_dark"
-                    android:gravity="right|center_vertical"/>
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/cafe"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -346,7 +354,9 @@
                 android:layout_weight="2"
                 android:text="학습률"
                 android:gravity="center|top"
-                android:textColor="@color/black"/>
+                android:paddingLeft="7dp"
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
 
             <View
                 android:layout_width="0dp"
@@ -516,7 +526,9 @@
                 android:text="90%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/black"/>
+                android:textColor="@color/darkdarkgray"
+
+                android:fontFamily="@font/cafe"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -531,7 +543,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:weightSum="5"
-        android:background="@drawable/round_gray">
+        android:background="@drawable/thin_gray">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -549,7 +561,8 @@
                 android:textStyle="bold"
                 android:textColor="@color/dark"
                 android:textSize="24dp"
-                android:paddingLeft="15dp"/>
+                android:paddingLeft="15dp"
+                android:fontFamily="@font/cafe"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -568,7 +581,8 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:background="@drawable/round_dark"
-                    android:gravity="right|center_vertical"/>
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/cafe"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -594,7 +608,9 @@
                 android:layout_weight="2"
                 android:text="학습률"
                 android:gravity="center|top"
-                android:textColor="@color/black"/>
+                android:textColor="@color/darkdarkgray"
+                android:paddingLeft="7dp"
+                android:fontFamily="@font/cafe"/>
 
             <View
                 android:layout_width="0dp"
@@ -764,7 +780,8 @@
                 android:text="90%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/black"/>
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -779,7 +796,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:weightSum="5"
-        android:background="@drawable/round_gray">
+        android:background="@drawable/thin_gray">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -798,7 +815,8 @@
                 android:text="토익 영단어"
                 android:textColor="@color/dark"
                 android:textSize="24dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/cafe"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -817,7 +835,8 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:background="@drawable/round_dark"
-                    android:gravity="right|center_vertical"/>
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/cafe"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -843,7 +862,9 @@
                 android:layout_weight="2"
                 android:text="학습률"
                 android:gravity="center|top"
-                android:textColor="@color/black"/>
+                android:paddingLeft="7dp"
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
 
             <View
                 android:layout_width="0dp"
@@ -1013,7 +1034,8 @@
                 android:text="90%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/black"/>
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -1028,7 +1050,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:weightSum="5"
-        android:background="@drawable/round_gray">
+        android:background="@drawable/thin_gray">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -1047,7 +1069,8 @@
                 android:text="여행 회화"
                 android:textColor="@color/dark"
                 android:textSize="24dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/cafe"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -1066,7 +1089,8 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:background="@drawable/round_dark"
-                    android:gravity="right|center_vertical"/>
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/cafe"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -1092,7 +1116,9 @@
                 android:layout_weight="2"
                 android:text="학습률"
                 android:gravity="center|top"
-                android:textColor="@color/black"/>
+                android:paddingLeft="7dp"
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
 
             <View
                 android:layout_width="0dp"
@@ -1262,7 +1288,8 @@
                 android:text="90%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/black"/>
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -1277,7 +1304,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="5dp"
         android:weightSum="5"
-        android:background="@drawable/round_gray">
+        android:background="@drawable/thin_gray">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -1296,7 +1323,8 @@
                 android:text="비지니스 회화"
                 android:textColor="@color/dark"
                 android:textSize="24dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:fontFamily="@font/cafe"/>
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -1315,7 +1343,8 @@
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:background="@drawable/round_dark"
-                    android:gravity="right|center_vertical"/>
+                    android:gravity="right|center_vertical"
+                    android:fontFamily="@font/cafe"/>
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -1341,7 +1370,9 @@
                 android:layout_weight="2"
                 android:text="학습률"
                 android:gravity="center|top"
-                android:textColor="@color/black"/>
+                android:paddingLeft="7dp"
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
 
             <View
                 android:layout_width="0dp"
@@ -1511,7 +1542,8 @@
                 android:text="75%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/black"/>
+                android:textColor="@color/darkdarkgray"
+                android:fontFamily="@font/cafe"/>
         </LinearLayout>
 
     </LinearLayout>

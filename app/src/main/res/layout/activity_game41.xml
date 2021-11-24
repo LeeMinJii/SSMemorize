@@ -29,7 +29,10 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="10dp"
             android:text="초등 영단어"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:background="@drawable/thin_gray"
+            android:textColor="@color/dark"
+            android:fontFamily="@font/cafe"/>
 
         <Button
             android:layout_width="match_parent"
@@ -40,7 +43,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="중등 영단어"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:background="@drawable/thin_gray"
+            android:textColor="@color/dark"
+            android:fontFamily="@font/cafe"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -50,7 +56,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="수능 영단어"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:background="@drawable/thin_gray"
+            android:textColor="@color/dark"
+            android:fontFamily="@font/cafe"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -60,7 +69,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="토익 영단어"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:background="@drawable/thin_gray"
+            android:textColor="@color/dark"
+            android:fontFamily="@font/cafe"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -70,7 +82,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="여행 회화"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:background="@drawable/thin_gray"
+            android:textColor="@color/dark"
+            android:fontFamily="@font/cafe"/>
         <Button
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -80,7 +95,10 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:text="비지니스 회화"
-            android:textSize="25dp"/>
+            android:textSize="25dp"
+            android:background="@drawable/thin_gray"
+            android:textColor="@color/dark"
+            android:fontFamily="@font/cafe"/>
 
     </LinearLayout>
 </RelativeLayout>

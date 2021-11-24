@@ -9,21 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SSMemorize">
-        <activity android:name=".MyProflie_5_2_2">
+        <activity android:name=".MyPage_5_2_2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MyProfile_5_2_1">
+        <activity android:name=".MyPage_5_2_1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MyProfile_5_1_1">
+        <activity android:name=".MyPage_5_1_1">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

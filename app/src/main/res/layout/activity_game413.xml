@@ -25,7 +25,8 @@
         android:textColor="@color/black"
         android:layout_weight="2.5"
         android:gravity="center"
-        android:background="@drawable/thin_gray"/>
+        android:background="@drawable/thin_gray"
+        android:fontFamily="@font/cafe"/>
     <Button
         android:id="@+id/game1_content1"
         android:layout_width="match_parent"
@@ -38,7 +39,8 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:backgroundTint="@color/dark"/>
+        android:backgroundTint="@color/dark"
+        android:fontFamily="@font/cafe"/>
     <Button
         android:id="@+id/game1_content2"
         android:layout_width="match_parent"
@@ -51,7 +53,8 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:backgroundTint="@color/dark"/>
+        android:backgroundTint="@color/dark"
+        android:fontFamily="@font/cafe"/>
     <Button
         android:id="@+id/game1_content3"
         android:layout_width="match_parent"
@@ -64,18 +67,21 @@
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:backgroundTint="@color/dark"/>
+        android:backgroundTint="@color/dark"
+        android:fontFamily="@font/cafe"/>
+
     <Button
         android:id="@+id/game1_content4"
         android:layout_width="match_parent"
         android:layout_height="75dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginTop="15dp"
         android:layout_below="@+id/game1_content3"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="40dp"
+        android:backgroundTint="@color/dark"
         android:text="handshake"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:backgroundTint="@color/dark"/>
+        android:fontFamily="@font/cafe"/>
 </RelativeLayout>
