@@ -47,7 +47,7 @@
         android:layout_weight="0.5"
         android:text=" 최고기록 : 100"
         android:textSize="20dp"
-        android:fontFamily="@font/cafe"
+        android:fontFamily="@font/cafe_air"
         android:layout_marginTop="5dp"
         android:drawableLeft="@drawable/little_star" />
 
@@ -74,7 +74,7 @@
         android:layout_weight="0.5"
         android:text=" 최고기록 : 80"
         android:textSize="20dp"
-        android:fontFamily="@font/cafe"
+        android:fontFamily="@font/cafe_air"
         android:layout_marginTop="5dp"
         android:drawableLeft="@drawable/little_star" />
 

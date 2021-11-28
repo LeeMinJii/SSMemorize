@@ -101,8 +101,8 @@
                 android:text="학습률"
                 android:gravity="center|top"
                 android:paddingLeft="7dp"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"/>
 
             <View
                 android:layout_width="0dp"
@@ -272,8 +272,8 @@
                 android:text="100%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"/>
 
         </LinearLayout>
 
@@ -352,11 +352,11 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="학습률"
+                android:fontFamily="@font/cafe_air"
                 android:gravity="center|top"
                 android:paddingLeft="7dp"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:text="학습률"
+                android:textColor="@color/dark" />
 
             <View
                 android:layout_width="0dp"
@@ -526,9 +526,9 @@
                 android:text="90%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/darkdarkgray"
+                android:textColor="@color/dark"
 
-                android:fontFamily="@font/cafe"/>
+                android:fontFamily="@font/cafe_air"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -608,9 +608,9 @@
                 android:layout_weight="2"
                 android:text="학습률"
                 android:gravity="center|top"
-                android:textColor="@color/darkdarkgray"
+                android:textColor="@color/dark"
                 android:paddingLeft="7dp"
-                android:fontFamily="@font/cafe"/>
+                android:fontFamily="@font/cafe_air"/>
 
             <View
                 android:layout_width="0dp"
@@ -777,11 +777,11 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
-                android:text="90%"
-                android:paddingLeft="10dp"
+                android:fontFamily="@font/cafe_air"
                 android:gravity="top"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:paddingLeft="10dp"
+                android:text="90%"
+                android:textColor="@color/dark" />
         </LinearLayout>
 
     </LinearLayout>
@@ -863,8 +863,8 @@
                 android:text="학습률"
                 android:gravity="center|top"
                 android:paddingLeft="7dp"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"/>
 
             <View
                 android:layout_width="0dp"
@@ -1034,8 +1034,8 @@
                 android:text="90%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -1117,8 +1117,8 @@
                 android:text="학습률"
                 android:gravity="center|top"
                 android:paddingLeft="7dp"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"/>
 
             <View
                 android:layout_width="0dp"
@@ -1288,8 +1288,8 @@
                 android:text="90%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -1371,8 +1371,8 @@
                 android:text="학습률"
                 android:gravity="center|top"
                 android:paddingLeft="7dp"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"/>
 
             <View
                 android:layout_width="0dp"
@@ -1542,8 +1542,8 @@
                 android:text="75%"
                 android:paddingLeft="10dp"
                 android:gravity="top"
-                android:textColor="@color/darkdarkgray"
-                android:fontFamily="@font/cafe"/>
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"/>
         </LinearLayout>
 
     </LinearLayout>

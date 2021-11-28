@@ -85,7 +85,7 @@
         android:textSize="25dp"
         android:gravity="center_vertical"
         android:layout_marginTop="40dp"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe_air"/>
 
     <CheckBox
         android:layout_width="match_parent"
@@ -96,7 +96,7 @@
         android:text=" 암기 완료"
         android:textSize="25dp"
         android:layout_marginTop="20dp"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe_air"/>
 
 
 </RelativeLayout>

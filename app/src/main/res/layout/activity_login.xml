@@ -31,7 +31,7 @@
         android:paddingLeft="25dp"
         android:background="@drawable/round_dark"
         android:drawableLeft="@drawable/person"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe_air"/>
 
     <View
         android:layout_width="match_parent"
@@ -60,7 +60,7 @@
         android:layout_marginRight="15dp"
         android:hint="이메일을 입력해주세요."
         android:paddingLeft="50dp"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe_air"/>
 
     <View
         android:layout_width="match_parent"
@@ -89,7 +89,7 @@
         android:layout_marginRight="15dp"
         android:hint="비밀번호를 입력해주세요."
         android:paddingLeft="50dp"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe_air"/>
 
     <Button
         android:layout_width="match_parent"

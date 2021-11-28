@@ -40,6 +40,6 @@
         android:textColorHint="@color/white"
         android:textColor="@color/white"
         android:paddingLeft="20dp"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe_air"/>
 
 </RelativeLayout>

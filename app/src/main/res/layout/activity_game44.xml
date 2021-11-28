@@ -27,7 +27,7 @@
         android:text=" 총 점수 : 80점"
         android:drawableLeft="@drawable/star"
         android:textSize="35dp"
-        android:textColor="@color/black"
+        android:textColor="@color/dark"
         android:layout_weight="2.5"
         android:gravity="center_vertical"
         android:padding="20dp"

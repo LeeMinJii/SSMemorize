@@ -39,14 +39,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="[ 총점 100점, 20문제 ]"
+            android:text="총점 100점, 20문제"
             android:textSize="20dp"
             android:textColor="@color/darkgray"
             android:layout_weight="0.5"
             android:gravity="center_vertical|bottom"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:fontFamily="@font/cafe"/>
+            android:fontFamily="@font/cafe_air"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -57,7 +57,7 @@
             android:gravity="center_vertical|top"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
-            android:fontFamily="@font/cafe"/>
+            android:fontFamily="@font/cafe_air"/>
     </LinearLayout>
 
     <Button
