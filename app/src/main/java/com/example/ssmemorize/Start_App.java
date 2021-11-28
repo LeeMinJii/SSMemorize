@@ -1,5 +1,6 @@
 package com.example.ssmemorize;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,6 +15,10 @@ public class Start_App extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_app);
+
+        // 타이틀바 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         //로그인 버튼 클릭 시 로그인 화면으로 이동
         Button btn_login = findViewById(R.id.btn_Login);
