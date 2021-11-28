@@ -2,10 +2,12 @@ package com.example.ssmemorize;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 public class Memorize_3_1 extends AppCompatActivity {
@@ -30,6 +32,18 @@ public class Memorize_3_1 extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) { }
+
+
         });
+
+        Button btn31_check = (Button) findViewById(R.id.btn31_check);
+        btn31_check.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), Memorize_3_2.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
