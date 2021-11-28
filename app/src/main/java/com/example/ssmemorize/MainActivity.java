@@ -17,9 +17,9 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
-    private Memorize_3_main memorize_main;
-    private Game_4_main game_main;
-    private MyPage_5_main mypage_main;
+    private Memorize_3_main memorize_main = new Memorize_3_main();
+    private Game_4_main game_main = new Game_4_main();
+    private MyPage_5_main mypage_main = new MyPage_5_main();
 
     private FragmentManager fm;
     private FragmentTransaction ft;
@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        setFrag(0);
     }
 
     private void setFrag(int n) {
