@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="word_number">
+        <item> 10개 </item>
+        <item> 20개 </item>
+        <item> 30개 </item>
+        <item> 40개 </item>
+        <item> 50개 </item>
+        <item> 60개 </item>
+        <item> 70개 </item>
+        <item> 80개 </item>
+        <item> 90개 </item>
+        <item> 1010개 </item>
+    </string-array>
+
+</resources>

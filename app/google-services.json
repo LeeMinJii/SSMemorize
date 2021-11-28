@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "471775248176",
+    "project_id": "memorize-app-1e5f3",
+    "storage_bucket": "memorize-app-1e5f3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471775248176:android:20c12cc6305fc561c092f5",
+        "android_client_info": {
+          "package_name": "com.example.ssmemorize"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "471775248176-h49numm5a31smv1nurclp2b45th8b71b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2UHcJURUoXub4fAa-zXo_vuNs0DxSM5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "471775248176-h49numm5a31smv1nurclp2b45th8b71b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

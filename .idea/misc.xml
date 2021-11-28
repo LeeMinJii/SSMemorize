@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game412.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game413.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game422.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game423.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game432.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game44.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game4_main.xml" value="0.2857789855072464" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize31.xml" value="0.25" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize32.xml" value="0.33" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize33.xml" value="0.2046875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize3_main.xml" value="0.2046875" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
