@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/back"
-        android:background="@color/white"
+        android:background="@color/transparent"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"/>
 
@@ -16,19 +16,15 @@
         android:id="@+id/show_day"
         android:layout_below="@+id/btn_back"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_weight="0"
+        android:layout_height="45dp"
         android:text="Day 01"
         android:textSize="20dp"
-        android:textStyle="bold"
-        android:textColor="@color/white"
-        android:gravity="center_vertical"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="20dp"
-        android:paddingLeft="35dp"
-        android:background="@drawable/round_dark"
-        android:fontFamily="@font/cafe"/>
+        android:textColor="@color/dark"
+        android:gravity="center"
+        android:layout_marginBottom="5dp"
+        android:background="@color/gray"
+        android:fontFamily="@font/cafe"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:id="@+id/Llayout_finish"
@@ -47,7 +43,7 @@
             android:layout_height="wrap_content"
             android:text="암기 완료!"
             android:textSize="30dp"
-            android:textColor="#FF0000"
+            android:textColor="@color/blue"
             android:layout_weight="2"
             android:gravity="center|bottom"
             android:fontFamily="@font/cafe"/>
