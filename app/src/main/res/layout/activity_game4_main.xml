@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:weightSum="9"
     android:layout_height="match_parent"
-    android:layout_width="match_parent">
+    android:layout_width="match_parent"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/tv_title"
@@ -16,14 +17,14 @@
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
         android:background="@drawable/round_dark"
-        android:text="   단어 암기 게임"
+        android:text="  단어 암기 게임"
         android:textStyle="bold"
         android:textSize="20dp"
         android:gravity="center_vertical"
         android:textColor="@color/white"
         android:drawableLeft="@drawable/tab2_game"
         android:paddingLeft="20dp"
-        android:fontFamily="@font/cafe" />
+        android:fontFamily="@font/cafe_air" />
 
 
     <LinearLayout
@@ -55,7 +56,7 @@
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:text=" 최고기록 : 100"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:fontFamily="@font/cafe_air"
             android:layout_marginTop="5dp"
             android:drawableLeft="@drawable/little_star" />
@@ -82,7 +83,7 @@
             android:layout_height="0dp"
             android:layout_weight="0.5"
             android:text=" 최고기록 : 80"
-            android:textSize="20dp"
+            android:textSize="15dp"
             android:fontFamily="@font/cafe_air"
             android:layout_marginTop="5dp"
             android:drawableLeft="@drawable/little_star" />
