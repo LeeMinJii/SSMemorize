@@ -3,18 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageButton
-        android:id="@+id/btn_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/back"
-        android:background="@color/transparent"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"/>
-
     <TextView
         android:id="@+id/show_day"
-        android:layout_below="@+id/btn_back"
         android:layout_width="match_parent"
         android:layout_height="45dp"
         android:text="Day 01"
@@ -24,9 +14,10 @@
         android:layout_marginBottom="5dp"
         android:background="@color/gray"
         android:fontFamily="@font/cafe"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="45dp"/>
 
     <Button
+        android:id="@+id/btn_game_end"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_below="@+id/show_day"

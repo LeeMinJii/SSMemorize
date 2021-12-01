@@ -63,6 +63,7 @@
                     android:drawableLeft="@drawable/right"/>
 
                 <Button
+                    android:id="@+id/btn_start_study"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.7"

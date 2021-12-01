@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -23,6 +24,16 @@ public class Memorize_3_2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Memorize_3_main.class);
+                startActivity(intent);
+            }
+        });
+
+        // start버튼
+        Button btn_start_study = findViewById(R.id.btn_start_study);
+        btn_start_study.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), memorize3_3.class);
                 startActivity(intent);
             }
         });
