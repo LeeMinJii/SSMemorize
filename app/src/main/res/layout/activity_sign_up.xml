@@ -84,19 +84,6 @@
         android:paddingLeft="30dp"
         android:fontFamily="@font/cafe_air"/>
 
-    <Button
-        android:id="@+id/duplication"
-        android:layout_width="100dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="15dp"
-        android:layout_gravity="right"
-        android:text="중복확인"
-        android:textSize="15dp"
-        android:textColor="@color/darkgray"
-        android:backgroundTint="#F0F0F0"
-        android:fontFamily="@font/cafe"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -121,7 +108,8 @@
         android:layout_marginRight="15dp"
         android:hint="비밀번호를 입력해주세요."
         android:paddingLeft="30dp"
-        android:fontFamily="@font/cafe_air"/>
+        android:fontFamily="@font/cafe_air"
+        android:inputType="textPassword"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -146,7 +134,8 @@
         android:layout_marginRight="15dp"
         android:hint="비밀번호 확인"
         android:paddingLeft="30dp"
-        android:fontFamily="@font/cafe_air"/>
+        android:fontFamily="@font/cafe_air"
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/sign_up_check"

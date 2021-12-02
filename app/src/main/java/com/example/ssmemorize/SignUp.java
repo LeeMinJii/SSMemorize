@@ -28,9 +28,22 @@ public class SignUp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+        // 타이틀바 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+        // 뒤로 가기 버튼
+        ImageButton btn_back = findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick (View view){
+                finish();
+            }
+        });
+
         mAuth = FirebaseAuth.getInstance();
         findViewById(R.id.sign_up_check).setOnClickListener(onClickListener);
-        findViewById(R.id.duplication).setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -39,9 +52,6 @@ public class SignUp extends AppCompatActivity {
             switch (v.getId()) {
                 case R.id.sign_up_check:
                     user_signUp();
-                    break;
-                case R.id.duplication:
-                    duplication_check();
                     break;
             }
         }
@@ -84,6 +94,9 @@ public class SignUp extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            Intent intent = new Intent(SignUp.this, Start_App.class);
+                            startActivity(intent);
+                            finish();
                             Toast.makeText(SignUp.this, "회원가입 성공 !", Toast.LENGTH_SHORT).show();
                         } else {
                             if (task.getException().toString() != null) {
@@ -99,21 +112,4 @@ public class SignUp extends AppCompatActivity {
             Toast.makeText(SignUp.this, "이메일과 비밀번호를 확인해주세요", Toast.LENGTH_SHORT).show();
         }
     }
-
-    /*
-    // 타이틀바 없애기
-    ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
-
-    // 뒤로 가기 버튼
-    ImageButton btn_back = findViewById(R.id.btn_back);
-    btn_back.setOnClickListener(new View.OnClickListener(){
-        @Override
-        public void onClick (View view){
-            finish();
-        }
-    });
-
-     */
 }
