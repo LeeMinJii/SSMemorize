@@ -33,7 +33,7 @@ public class Memorize_3_2 extends AppCompatActivity {
         btn_start_study.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), memorize3_3.class);
+                Intent intent = new Intent(getApplicationContext(), Memorize_3_3.class);
                 startActivity(intent);
             }
         });

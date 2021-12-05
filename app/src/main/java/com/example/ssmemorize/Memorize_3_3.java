@@ -4,15 +4,25 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-public class memorize3_3 extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class Memorize_3_3 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorize33);
+
+        ArrayList<Elementary> elementaryList = init_Load_ElementaryDB();
+
+        TextView tv_english = findViewById(R.id.tv_word);
+        String word = elementaryList.get(0).english;
+        tv_english.setText(word);
 
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
@@ -26,5 +36,18 @@ public class memorize3_3 extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    // Load DataBase
+    private ArrayList init_Load_ElementaryDB() {
+        DataBaseHelper dataBaseHelper = new DataBaseHelper(getApplicationContext());
+        dataBaseHelper.OpenDatabaseFile();
+
+        ArrayList elementaryList =  dataBaseHelper.getTableData();
+        Log.e("test", String.valueOf(elementaryList.size()));
+
+        dataBaseHelper.close();
+        return elementaryList;
+
     }
 }

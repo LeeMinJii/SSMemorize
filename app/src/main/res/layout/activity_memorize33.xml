@@ -50,12 +50,13 @@
         android:background="@color/dark" >
 
         <TextView
+            android:id="@+id/tv_word"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="사과"
-            android:textSize="50dp"
+            android:text="apple"
+            android:textSize="55dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:visibility="visible"
@@ -66,7 +67,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
-            android:text="apple"
+            android:text="사과"
             android:textSize="50dp"
             android:textColor="@color/white"
             android:gravity="center"

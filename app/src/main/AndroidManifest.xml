@@ -95,7 +95,7 @@
             android:exported="true">
         </activity>
 
-        <activity android:name=".memorize3_3" />
+        <activity android:name=".Memorize_3_3" />
         <activity
             android:name=".Memorize_3_2"
             android:exported="true">
