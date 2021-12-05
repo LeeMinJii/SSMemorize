@@ -18,13 +18,12 @@ public class Memorize_3_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorize32);
 
-        ImageButton Button32 =  findViewById(R.id.btn32);
-        Button32.setOnClickListener(new View.OnClickListener() {
-
+        // 뒤로 가기 버튼
+        ImageButton btn_back = findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Memorize_3_main.class);
-                startActivity(intent);
+                finish();
             }
         });
 

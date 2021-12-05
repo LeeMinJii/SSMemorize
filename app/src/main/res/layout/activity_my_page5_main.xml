@@ -10,25 +10,23 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
-        android:background="@drawable/round_dark"
-        android:text=" MyPage"
+        android:text="‣ 마이페이지"
         android:textStyle="bold"
-        android:textSize="20dp"
-        android:gravity="center_vertical"
-        android:textColor="@color/white"
-        android:drawableLeft="@drawable/person"
+        android:textSize="30dp"
+        android:gravity="center_vertical|bottom"
+        android:textColor="@color/black"
         android:paddingLeft="20dp"
-        android:fontFamily="@font/cafe_air"/>
+        android:fontFamily="@font/cafe"/>
 
     <LinearLayout
         android:layout_below="@+id/name"
         android:id="@+id/Llayout_profile"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="130dp"
         android:orientation="horizontal"
         android:weightSum="5"
         android:layout_marginTop="30dp"
-        android:background="@drawable/thin_gray"
+        android:background="@color/gray"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp">
 
@@ -36,19 +34,19 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
-            android:src="@drawable/sssu"
+            android:src="@drawable/person"
             android:layout_margin="20dp"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
             android:text="이민지"
-            android:textSize="40dp"
+            android:textSize="35dp"
             android:textColor="@color/dark"
             android:textStyle="bold"
             android:paddingLeft="10dp"
             android:gravity="center_vertical"
-            android:fontFamily="@font/cafe"
+            android:fontFamily="@font/cafe_air"
             />
     </LinearLayout>
 
@@ -64,10 +62,10 @@
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         android:fontFamily="@font/cafe_air"
-        android:drawableLeft="@drawable/right"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:drawableLeft="@drawable/arrow"/>
 
     <Button
         android:id="@+id/mypage_myword"
@@ -81,7 +79,7 @@
         android:gravity="center_vertical"
         android:paddingLeft="20dp"
         android:fontFamily="@font/cafe_air"
-        android:drawableLeft="@drawable/right"
+        android:drawableLeft="@drawable/arrow"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="5dp"/>
