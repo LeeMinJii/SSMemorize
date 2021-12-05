@@ -94,6 +94,9 @@ public class SignUp extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            Intent intent_name = new Intent(SignUp.this, MyPage_5_main.class);
+                            intent_name.putExtra("mypage_name", name);
+
                             Intent intent = new Intent(SignUp.this, Start_App.class);
                             startActivity(intent);
                             finish();

@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MyPage_5_main extends Fragment implements View.OnClickListener{
 
@@ -20,6 +21,7 @@ public class MyPage_5_main extends Fragment implements View.OnClickListener{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         view=inflater.inflate(R.layout.activity_my_page5_main,container,false);
 
         mypage_check=view.findViewById(R.id.mypage_check);

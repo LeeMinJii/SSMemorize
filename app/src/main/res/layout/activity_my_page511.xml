@@ -12,49 +12,73 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="15dp"/>
 
-    <Button
+    <TextView
         android:id="@+id/mypage_goal"
-        android:layout_width="match_parent"
+        android:layout_width="100dp"
         android:layout_height="65dp"
-        android:backgroundTint="@color/white"
-        android:text="✒ 이번 달 목표 : "
-        android:textColor="@color/dark"
-        android:textSize="17dp"
         android:layout_below="@+id/btn_back"
-        android:gravity="center_vertical"
-        android:paddingLeft="30dp"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/cafe"
-        />
-    <Button
-        android:id="@+id/mypage_memo"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="✒ 이번 달 \n\t\t\t\t\t목 표 "
+        android:textColor="@color/dark"
+        android:textSize="16dp" />
+
+    <EditText
+        android:id="@+id/enter_goal"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:backgroundTint="@color/white"
-        android:text="📃 한 줄 메모 : "
-        android:textColor="@color/dark"
-        android:textSize="17dp"
-        android:layout_below="@+id/mypage_goal"
-        android:gravity="center_vertical"
+        android:layout_below="@+id/btn_back"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/mypage_goal"
+        android:background="@drawable/thin_gray"
+        android:fontFamily="@font/cafe_air"
+        android:hint="이번달 목표를 입력해주세요."
         android:paddingLeft="30dp"
+        android:textSize="16dp" />
+
+
+    <TextView
+        android:id="@+id/mypage_memo"
+        android:layout_width="100dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/mypage_goal"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/cafe"
-        />
+        android:gravity="center_vertical"
+        android:text="  📃 한 줄 \n\t\t\t\t\ 메 모  : "
+        android:textColor="@color/dark"
+        android:textSize="16dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_below="@+id/enter_goal"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/mypage_memo"
+        android:background="@drawable/thin_gray"
+        android:fontFamily="@font/cafe_air"
+        android:hint="메모를 입력해주세요."
+        android:paddingLeft="30dp"
+        android:textSize="16dp" />
 
     <TextView
         android:id="@+id/tmp_view"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_below="@+id/mypage_memo"
-        android:text="출석체크"
-        android:textSize="25dp"
-        android:textColor="@color/dark"
-        android:background="@drawable/thin_gray"
         android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
         android:layout_marginTop="30dp"
-        android:gravity="center"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/thin_gray"
         android:fontFamily="@font/cafe"
-        />
+        android:gravity="center"
+        android:text="출석체크"
+        android:textColor="@color/dark"
+        android:textSize="25dp" />
     <CalendarView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
