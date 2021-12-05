@@ -39,14 +39,14 @@ public class Memorize_3_3 extends AppCompatActivity {
     }
 
     // Load DataBase
-    private ArrayList init_Load_ElementaryDB() {
-        DataBaseHelper dataBaseHelper = new DataBaseHelper(getApplicationContext());
-        dataBaseHelper.OpenDatabaseFile();
+    private ArrayList<Elementary> init_Load_ElementaryDB() {
+        DBHelper DBHelper = new DBHelper(getApplicationContext());
+        DBHelper.OpenDatabaseFile();
 
-        ArrayList elementaryList =  dataBaseHelper.getTableData();
+        ArrayList<Elementary> elementaryList =  DBHelper.getTableData();
         Log.e("test", String.valueOf(elementaryList.size()));
 
-        dataBaseHelper.close();
+        DBHelper.close();
         return elementaryList;
 
     }

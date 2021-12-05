@@ -17,20 +17,20 @@ import java.util.ArrayList;
 import java.util.List;
 //private static String ele_word ="/data/data/com.example.test/databases/"; // Database name
 
-public class DataBaseHelper extends SQLiteOpenHelper {
+public class DBHelper extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
-    private static String TAG = "DataBaseHelper";
+    private static String TAG = "DBHelper";
     //private static String wordDB = "ele_word.db";
 
     private static String databasePath = "/data/data/com.example.ssmemorize/databases/"; // 데이터베이스 경로
-    private static String databaseName = "ele_word.db"; // 데이터베이스 이름
-    private static String tableName = "ele_word"; // 테이블 이름
+    private static String databaseName = "elementary_Word.db"; // 데이터베이스 이름
+    private static String tableName = "elementary_Word"; // 테이블 이름
 
     private SQLiteDatabase mDataBase;
     private final Context mContext;
 
 
-    public DataBaseHelper(Context context) {
+    public DBHelper(Context context) {
         super(context, "databaseName", null, DATABASE_VERSION);
         this.mContext = context;
     }
@@ -81,11 +81,6 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private boolean checkDataBase() {
         File file = new File(databasePath + databaseName);
         return file.exists();
-        //if (file.exists()) return true;
-        //if (!file.getParentFile().exists()) {
-        //    file.getParentFile().mkdirs();
-        //}
-        //return false;
     }
 
     // DB 복사
@@ -105,11 +100,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public ArrayList getTableData() {
+    public ArrayList<Elementary> getTableData() {
 
         try {
             // 테이블 정보 저장 List
-            ArrayList mList = new ArrayList();
+            ArrayList<Elementary> mList = new ArrayList<Elementary>();
 
             // 쿼리
             String sql = "SELECT * FROM " + tableName;
