@@ -55,7 +55,7 @@ public class Memorize_3_1 extends AppCompatActivity {
 
         // 단어 암기 유형 텍스트뷰 띄우기
         tv_word_type = findViewById(R.id.tv_wordtype31);
-        switch (Memorize_3_main.sig_wordtype){
+        switch (Memorize_3_main.flag_wordtype){
             case 1:
                 tv_word_type.setText("초등 영단어");
                 break;

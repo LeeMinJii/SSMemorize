@@ -15,10 +15,12 @@ import java.util.ArrayList;
 
 public class Memorize_3_3 extends AppCompatActivity {
 
-    int show_eng_or_kor = 0;
-    int index = 1;
+    int show_eng_or_kor = 1; // framelayout 화면전환 - 처음 클릭 시 안먹어서 0이아니라 1로.
+    int index = 1; // 단어 몇개째 외우고 있나 textview 띄우기 위함
+    int Wcursor=0; // Day에 따라 리스트의 몇번째 데이터부터 출력할지 정하는 Word Cursor
 
     TextView tv_word_num; // 몇번째 단어인지
+    TextView show_day; // Day xx
 
     // FrameLayout TextView 선언
     TextView tv_english;
@@ -40,13 +42,6 @@ public class Memorize_3_3 extends AppCompatActivity {
 
         tv_word_num.setText(String.valueOf(index)); // 초기값 : 1(현재 단어)/20(전체단어)
 
-        String word_eng = elementaryList.get(0).english;
-        tv_english.setText(word_eng);
-
-        String word_kor = elementaryList.get(0).korean;
-        tv_korean.setText(word_kor);
-
-
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
@@ -59,6 +54,57 @@ public class Memorize_3_3 extends AppCompatActivity {
                 finish();
             }
         });
+
+        // Day xx 텍스트뷰, 커서 알맞게 초기화
+        show_day = findViewById(R.id.show_day);
+        switch (Memorize_3_2.flag_Day){
+            case 1:
+                show_day.setText("Day 01");
+                Wcursor = 0;
+                break;
+            case 2:
+                show_day.setText("Day 02");
+                Wcursor = 20;
+                break;
+            case 3:
+                show_day.setText("Day 03");
+                Wcursor = 40;
+                break;
+            case 4:
+                show_day.setText("Day 04");
+                Wcursor =60;
+                break;
+            case 5:
+                show_day.setText("Day 05");
+                Wcursor = 80;
+                break;
+            case 6:
+                show_day.setText("Day 06");
+                Wcursor = 100;
+                break;
+            case 7:
+                show_day.setText("Day 07");
+                Wcursor = 120;
+                break;
+            case 8:
+                show_day.setText("Day 08");
+                Wcursor = 140;
+                break;
+            case 9:
+                show_day.setText("Day 09");
+                Wcursor = 160;
+                break;
+            case 10:
+                show_day.setText("Day 10");
+                Wcursor = 180;
+                break;
+        }
+
+        String word_eng = elementaryList.get(Wcursor).english; // Day xx의 첫번째 단어 띄우기
+        tv_english.setText(word_eng);
+
+        String word_kor = elementaryList.get(Wcursor).korean; // Day xx의 첫번째 단어 띄우기
+        tv_korean.setText(word_kor);
     }
 
     // Load DataBase
@@ -73,16 +119,17 @@ public class Memorize_3_3 extends AppCompatActivity {
         return elementaryList;
     }
 
-    // btn_next 클릭 시 다음 단어로 넘어가기
+    // Day 1 - btn_next 클릭 시 다음 단어로 넘어가기
     public void onBtnNextClicked(View view){
         // 현재 단어 개수 증가 2/20, 3/20 ...
         index += 1;
+        Wcursor +=1;
 
         // 20개 넘었으면 Day 하나 학습 종료 창으로 넘어가기
-        if(index ==21){
+        if(index == 21){
             Intent intent = new Intent(getApplicationContext(), Memorize_3_4.class);
             startActivity(intent);
-            return;
+            return; // 현재 액티비티 끝내기
         }
 
         tv_word_num = findViewById(R.id.word_num);
@@ -92,10 +139,11 @@ public class Memorize_3_3 extends AppCompatActivity {
         tv_english = findViewById(R.id.tv_word_eng);
         tv_korean = findViewById(R.id.tv_word_kor);
 
-        String word_eng = elementaryList.get(index-1).english; // index-1 번째의 데이터 가져오기
+        // Day xx에 따라 위에서 초기화한 WCursor번째의 데이터 가져오기
+        String word_eng = elementaryList.get(Wcursor).english;
         tv_english.setText(word_eng);
 
-        String word_kor = elementaryList.get(index-1).korean;
+        String word_kor = elementaryList.get(Wcursor).korean;
         tv_korean.setText(word_kor);
     }
 

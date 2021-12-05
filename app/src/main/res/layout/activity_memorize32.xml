@@ -54,17 +54,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="3.3"
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
                     android:text=" Day 01"
                     android:textColor="@color/dark"
                     android:textSize="20dp"
                     android:fontFamily="@font/cafe_air"
-                    android:drawableLeft="@drawable/list"/>
+                    android:drawableLeft="@drawable/arrow"/>
 
                 <Button
-                    android:id="@+id/btn_start_study"
+                    android:id="@+id/btn_start_study1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.7"
@@ -88,9 +88,9 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:src="@drawable/check"
-                    android:layout_margin="3dp"/>
+                    android:layout_weight="0.7"
+                    android:src="@drawable/check_blue"
+                    android:layout_marginRight="10dp"/>
 
             </LinearLayout>
             <LinearLayout
@@ -104,16 +104,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="3.3"
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
                     android:text=" Day 02"
                     android:textColor="@color/dark"
                     android:textSize="20dp"
                     android:fontFamily="@font/cafe_air"
-                    android:drawableLeft="@drawable/list"/>
+                    android:drawableLeft="@drawable/arrow"/>
 
                 <Button
+                    android:id="@+id/btn_start_study2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.7"
@@ -137,9 +138,9 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:src="@drawable/check"
-                    android:layout_margin="3dp"/>
+                    android:layout_marginRight="10dp"/>
 
             </LinearLayout>
 
@@ -154,16 +155,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="3.3"
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
                     android:text=" Day 03"
                     android:textColor="@color/dark"
                     android:textSize="20dp"
                     android:fontFamily="@font/cafe_air"
-                    android:drawableLeft="@drawable/list"/>
+                    android:drawableLeft="@drawable/arrow"/>
 
                 <Button
+                    android:id="@+id/btn_start_study3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.7"
@@ -187,9 +189,9 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:src="@drawable/check"
-                    android:layout_margin="3dp"/>
+                    android:layout_marginRight="10dp"/>
 
             </LinearLayout>
 
@@ -204,16 +206,17 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="3"
+                    android:layout_weight="3.3"
                     android:gravity="center_vertical"
                     android:paddingLeft="15dp"
                     android:text=" Day 04"
                     android:textColor="@color/dark"
                     android:textSize="20dp"
                     android:fontFamily="@font/cafe_air"
-                    android:drawableLeft="@drawable/list"/>
+                    android:drawableLeft="@drawable/arrow"/>
 
                 <Button
+                    android:id="@+id/btn_start_study4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.7"
@@ -237,9 +240,309 @@
                 <ImageView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_weight="0.7"
                     android:src="@drawable/check"
-                    android:layout_margin="3dp"/>
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item5"
+                android:layout_below="@+id/item4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text=" Day 05"
+                    android:textColor="@color/dark"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/cafe_air"
+                    android:drawableLeft="@drawable/arrow"/>
+
+                <Button
+                    android:id="@+id/btn_start_study5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="start"
+                    android:textSize="12dp"
+                    android:background="@drawable/round_outline_blue"
+                    android:fontFamily="@font/cafe_air"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/round_gray"
+                    android:fontFamily="@font/cafe_air"
+                    android:text="reset"
+                    android:textColor="@color/dark"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/check"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item6"
+                android:layout_below="@+id/item5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text=" Day 06"
+                    android:textColor="@color/dark"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/cafe_air"
+                    android:drawableLeft="@drawable/arrow"/>
+
+                <Button
+                    android:id="@+id/btn_start_study6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="start"
+                    android:textSize="12dp"
+                    android:background="@drawable/round_outline_blue"
+                    android:fontFamily="@font/cafe_air"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/round_gray"
+                    android:fontFamily="@font/cafe_air"
+                    android:text="reset"
+                    android:textColor="@color/dark"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/check"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item7"
+                android:layout_below="@+id/item6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text=" Day 07"
+                    android:textColor="@color/dark"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/cafe_air"
+                    android:drawableLeft="@drawable/arrow"/>
+
+                <Button
+                    android:id="@+id/btn_start_study7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="start"
+                    android:textSize="12dp"
+                    android:background="@drawable/round_outline_blue"
+                    android:fontFamily="@font/cafe_air"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/round_gray"
+                    android:fontFamily="@font/cafe_air"
+                    android:text="reset"
+                    android:textColor="@color/dark"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/check"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item8"
+                android:layout_below="@+id/item7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text=" Day 08"
+                    android:textColor="@color/dark"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/cafe_air"
+                    android:drawableLeft="@drawable/arrow"/>
+
+                <Button
+                    android:id="@+id/btn_start_study8"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="start"
+                    android:textSize="12dp"
+                    android:background="@drawable/round_outline_blue"
+                    android:fontFamily="@font/cafe_air"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/round_gray"
+                    android:fontFamily="@font/cafe_air"
+                    android:text="reset"
+                    android:textColor="@color/dark"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/check"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item9"
+                android:layout_below="@+id/item8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text=" Day 09"
+                    android:textColor="@color/dark"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/cafe_air"
+                    android:drawableLeft="@drawable/arrow"/>
+
+                <Button
+                    android:id="@+id/btn_start_study9"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="start"
+                    android:textSize="12dp"
+                    android:background="@drawable/round_outline_blue"
+                    android:fontFamily="@font/cafe_air"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/round_gray"
+                    android:fontFamily="@font/cafe_air"
+                    android:text="reset"
+                    android:textColor="@color/dark"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/check"
+                    android:layout_marginRight="10dp"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/item10"
+                android:layout_below="@+id/item9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.3"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:text=" Day 10"
+                    android:textColor="@color/dark"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/cafe_air"
+                    android:drawableLeft="@drawable/arrow"/>
+
+                <Button
+                    android:id="@+id/btn_start_study10"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.7"
+                    android:text="start"
+                    android:textSize="12dp"
+                    android:background="@drawable/round_outline_blue"
+                    android:fontFamily="@font/cafe_air"
+                    android:layout_margin="5dp" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/round_gray"
+                    android:fontFamily="@font/cafe_air"
+                    android:text="reset"
+                    android:textColor="@color/dark"
+                    android:textSize="10dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.7"
+                    android:src="@drawable/check"
+                    android:layout_marginRight="10dp"/>
 
             </LinearLayout>
 

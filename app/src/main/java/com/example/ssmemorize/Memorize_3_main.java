@@ -13,7 +13,7 @@ import android.widget.Button;
 
 public class Memorize_3_main extends Fragment implements View.OnClickListener {
 
-    public static int sig_wordtype =0;
+    public static int flag_wordtype = 0;
 
     private View view;
     Button btn_study1;
@@ -55,27 +55,27 @@ public class Memorize_3_main extends Fragment implements View.OnClickListener {
 
         switch (view.getId()){
             case R.id.btn_study1:
-                sig_wordtype =1;
+                flag_wordtype =1;
                 getActivity().startActivity(new Intent(getActivity(),Memorize_3_1.class)); // 화면전환
                 break;
             case R.id.btn_study2:
-                sig_wordtype =2;
+                flag_wordtype =2;
                 getActivity().startActivity(new Intent(getActivity(),Memorize_3_1.class));
                 break;
             case R.id.btn_study3:
-                sig_wordtype =3;
+                flag_wordtype =3;
                 getActivity().startActivity(new Intent(getActivity(),Memorize_3_1.class));
                 break;
             case R.id.btn_study4:
-                sig_wordtype =4;
+                flag_wordtype =4;
                 getActivity().startActivity(new Intent(getActivity(),Memorize_3_1.class));
                 break;
             case R.id.btn_study5:
-                sig_wordtype =5;
+                flag_wordtype =5;
                 getActivity().startActivity(new Intent(getActivity(),Memorize_3_1.class));
                 break;
             case R.id.btn_study6:
-                sig_wordtype =6;
+                flag_wordtype =6;
                 getActivity().startActivity(new Intent(getActivity(),Memorize_3_1.class));
                 break;
         }
