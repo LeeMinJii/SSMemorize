@@ -42,7 +42,7 @@
             android:id="@+id/word_num"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="21"
+            android:text="20"
             android:textSize="23dp"
             android:textColor="@color/darkdarkgray"
             android:gravity="right"

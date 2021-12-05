@@ -1,5 +1,6 @@
 package com.example.ssmemorize;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -22,5 +23,10 @@ public class Memorize_3_4 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 타이틀바 없애기
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
     }
 }

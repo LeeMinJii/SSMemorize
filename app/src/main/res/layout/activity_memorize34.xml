@@ -19,17 +19,17 @@
     <Button
         android:id="@+id/btn_game_end"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:layout_below="@+id/show_day"
         android:text="학습 종료"
-        android:textSize="35dp"
+        android:textSize="30dp"
         android:textColor="@color/dark"
         android:background="@drawable/thin_gray"
         android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="170dp"
         android:layout_marginBottom="250dp"
         android:gravity="center"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe_air"/>
 
 </RelativeLayout>

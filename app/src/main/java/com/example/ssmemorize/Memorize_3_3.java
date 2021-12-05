@@ -79,10 +79,11 @@ public class Memorize_3_3 extends AppCompatActivity {
         index += 1;
 
         // 20개 넘었으면 Day 하나 학습 종료 창으로 넘어가기
-        //if(index ==21){
-        //    Intent intent = new Intent(getApplicationContext(), Memorize_3_4.class);
-        //    startActivity(intent);
-        //}
+        if(index ==21){
+            Intent intent = new Intent(getApplicationContext(), Memorize_3_4.class);
+            startActivity(intent);
+            return;
+        }
 
         tv_word_num = findViewById(R.id.word_num);
         tv_word_num.setText(String.valueOf(index));
@@ -91,7 +92,7 @@ public class Memorize_3_3 extends AppCompatActivity {
         tv_english = findViewById(R.id.tv_word_eng);
         tv_korean = findViewById(R.id.tv_word_kor);
 
-        String word_eng = elementaryList.get(index-1).english;
+        String word_eng = elementaryList.get(index-1).english; // index-1 번째의 데이터 가져오기
         tv_english.setText(word_eng);
 
         String word_kor = elementaryList.get(index-1).korean;
