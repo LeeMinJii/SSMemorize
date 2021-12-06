@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_margin="10dp">
+
+    <TextView
+        android:id="@+id/tv_myword_eng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="영어 단어"
+        android:textColor="@color/dark"
+        android:textSize="30dp"
+        android:fontFamily="@font/cafe_air"/>
+
+    <TextView
+        android:id="@+id/tv_myword_kor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="한글 뜻"
+        android:textColor="@color/dark"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/cafe_air"/>
+
+</LinearLayout>

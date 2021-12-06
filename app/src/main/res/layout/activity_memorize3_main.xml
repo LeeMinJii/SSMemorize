@@ -50,7 +50,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7.7"
+                    android:layout_weight="8"
                     android:gravity="bottom"
                     android:text="초등 영단어"
                     android:textStyle="bold"
@@ -63,7 +63,7 @@
                         android:id="@+id/btn_study1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="2"
+                        android:layout_weight="1.5"
                         android:textColor="@color/white"
                         android:background="@drawable/next"
                         android:gravity="right|center_vertical"/>
@@ -285,7 +285,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7.7"
+                    android:layout_weight="8"
                     android:gravity="bottom"
                     android:text="중등 영단어"
                     android:textStyle="bold"
@@ -298,7 +298,7 @@
                     android:id="@+id/btn_study2"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="1.5"
                     android:textColor="@color/white"
                     android:background="@drawable/next"
                     android:gravity="right|center_vertical"/>
@@ -519,7 +519,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7.7"
+                    android:layout_weight="8"
                     android:gravity="bottom"
                     android:text="수능 영단어"
                     android:textStyle="bold"
@@ -532,7 +532,7 @@
                     android:id="@+id/btn_study3"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="1.5"
                     android:textColor="@color/white"
                     android:background="@drawable/next"
                     android:gravity="right|center_vertical"/>
@@ -754,7 +754,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7.7"
+                    android:layout_weight="8"
                     android:gravity="bottom"
                     android:paddingLeft="15dp"
                     android:text="토익 영단어"
@@ -767,7 +767,7 @@
                     android:id="@+id/btn_study4"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="1.5"
                     android:textColor="@color/white"
                     android:background="@drawable/next"
                     android:gravity="right|center_vertical"/>
@@ -988,7 +988,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7.7"
+                    android:layout_weight="8"
                     android:gravity="bottom"
                     android:paddingLeft="15dp"
                     android:text="여행 회화"
@@ -1001,7 +1001,7 @@
                     android:id="@+id/btn_study5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="1.5"
                     android:textColor="@color/white"
                     android:background="@drawable/next"
                     android:gravity="right|center_vertical"/>
@@ -1222,7 +1222,7 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="7.7"
+                    android:layout_weight="8"
                     android:gravity="bottom"
                     android:paddingLeft="15dp"
                     android:text="비지니스 회화"
@@ -1235,7 +1235,7 @@
                     android:id="@+id/btn_study6"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="2"
+                    android:layout_weight="1.5"
                     android:textColor="@color/white"
                     android:background="@drawable/next"
                     android:gravity="right|center_vertical"/>
