@@ -25,12 +25,8 @@ public class Memorize_3_3 extends AppCompatActivity {
     //int complete_word = 1; // framelayout 암기완료/미완료 단어
     int index = 1; // 단어 몇개째 외우고 있나 textview 띄우기 위함
     public static int Wcursor=0; // Day에 따라 리스트의 몇번째 데이터부터 출력할지 정하는 Word Cursor
-<<<<<<< HEAD
     //public static int myword_num = 0; // myword배열에 0번째 부터 넣기
-    int[] complete = new int[200]; // 단어 암기 완료/미완료 구분 (암기 완료면 0 들어있음)
-=======
-    public static int myword_num = 0; // myword배열에 0번째 부터 넣기
->>>>>>> 897e9bcbcd429b5e270bfc600795aa91d6a75d10
+    int[] complete = new int[200];
 
     TextView tv_word_num; // 몇번째 단어인지
     TextView show_day; // Day xx
@@ -43,11 +39,7 @@ public class Memorize_3_3 extends AppCompatActivity {
     TextView tv_complete;
 
     public static ArrayList<Elementary> elementaryList;
-<<<<<<< HEAD
     //public static ArrayList<Elementary> myword_elementaryList; // 내 단어장 리스트
-=======
-    public static ArrayList<Elementary> myword_elementaryList; // 내 단어장 리스트
->>>>>>> 897e9bcbcd429b5e270bfc600795aa91d6a75d10
 
     String MyWord_kor; // 내 단어장에 추가
     String MyWord_eng;
