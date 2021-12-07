@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Game_4_3_3">
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="197dp"
+        android:layout_height="123dp"
+        android:text="cardgame"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="80dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

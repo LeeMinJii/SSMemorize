@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game41.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game412.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game413.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game422.xml" value="0.36614583333333334" />
@@ -25,6 +26,7 @@
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page5_main.xml" value="0.2046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_sign_up.xml" value="0.2046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_start_app.xml" value="0.1" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/listview_myword.xml" value="0.18489583333333334" />
       </map>
     </option>
   </component>

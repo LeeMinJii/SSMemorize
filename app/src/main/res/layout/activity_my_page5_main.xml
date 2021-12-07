@@ -54,18 +54,18 @@
         android:id="@+id/mypage_check"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:backgroundTint="@color/white"
-        android:text=" 출석체크"
-        android:textColor="@color/dark"
-        android:textSize="17dp"
         android:layout_below="@+id/Llayout_profile"
-        android:gravity="center_vertical"
-        android:paddingLeft="20dp"
-        android:fontFamily="@font/cafe_air"
-        android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="30dp"
-        android:drawableLeft="@drawable/arrow"/>
+        android:layout_marginRight="25dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/arrow"
+        android:fontFamily="@font/cafe_air"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:text=" 출석체크"
+        android:textColor="@color/dark"
+        android:textSize="17dp" />
 
     <Button
         android:id="@+id/mypage_myword"

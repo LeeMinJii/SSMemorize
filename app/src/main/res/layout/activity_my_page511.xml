@@ -22,7 +22,7 @@
         android:fontFamily="@font/cafe"
         android:gravity="center_vertical"
         android:paddingLeft="10dp"
-        android:text="✒ 이번 달 \n\t\t\t\t\t목 표 "
+        android:text="✒ 이번달 \n\t\t\t\t목 표 :"
         android:textColor="@color/dark"
         android:textSize="16dp" />
 
@@ -79,9 +79,10 @@
         android:text="출석체크"
         android:textColor="@color/dark"
         android:textSize="25dp" />
+
     <CalendarView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/tmp_view"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp" />
 </RelativeLayout>
