@@ -21,84 +21,94 @@
         android:weightSum="7">
 
         <Button
+            android:id="@+id/elementary_game"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="30dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
-            android:text="초등 영단어"
-            android:textSize="25dp"
+            android:layout_weight="1"
             android:background="@drawable/thin_gray"
+            android:fontFamily="@font/cafe"
+            android:text="초등 영단어"
             android:textColor="@color/dark"
-            android:fontFamily="@font/cafe"/>
+            android:textSize="25dp" />
 
         <Button
+            android:id="@+id/middle_game"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/thin_gray"
+            android:fontFamily="@font/cafe"
             android:text="중등 영단어"
-            android:textSize="25dp"
-            android:background="@drawable/thin_gray"
             android:textColor="@color/dark"
-            android:fontFamily="@font/cafe"/>
+            android:textSize="25dp" />
+
         <Button
+            android:id="@+id/college_exam_game"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/thin_gray"
+            android:fontFamily="@font/cafe"
             android:text="수능 영단어"
-            android:textSize="25dp"
-            android:background="@drawable/thin_gray"
             android:textColor="@color/dark"
-            android:fontFamily="@font/cafe"/>
+            android:textSize="25dp" />
+
         <Button
+            android:id="@+id/toeic_game"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/thin_gray"
+            android:fontFamily="@font/cafe"
             android:text="토익 영단어"
-            android:textSize="25dp"
-            android:background="@drawable/thin_gray"
             android:textColor="@color/dark"
-            android:fontFamily="@font/cafe"/>
+            android:textSize="25dp" />
+
         <Button
+            android:id="@+id/travel_game"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/thin_gray"
+            android:fontFamily="@font/cafe"
             android:text="여행 회화"
-            android:textSize="25dp"
-            android:background="@drawable/thin_gray"
             android:textColor="@color/dark"
-            android:fontFamily="@font/cafe"/>
+            android:textSize="25dp" />
+
         <Button
+            android:id="@+id/business_game"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
             android:layout_marginLeft="25dp"
-            android:layout_marginRight="25dp"
             android:layout_marginTop="10dp"
+            android:layout_marginRight="25dp"
             android:layout_marginBottom="10dp"
-            android:text="비지니스 회화"
-            android:textSize="25dp"
+            android:layout_weight="1"
             android:background="@drawable/thin_gray"
+            android:fontFamily="@font/cafe"
+            android:text="비지니스 회화"
             android:textColor="@color/dark"
-            android:fontFamily="@font/cafe"/>
+            android:textSize="25dp" />
 
     </LinearLayout>
 </RelativeLayout>
