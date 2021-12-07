@@ -11,7 +11,7 @@ import android.widget.ListView;
 public class MyPage_5_2_1 extends AppCompatActivity {
 
     private ListView listView;
-    private Adapter_listview adapter;
+    //private Adapter_listview adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

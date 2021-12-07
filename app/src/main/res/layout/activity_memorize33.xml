@@ -143,48 +143,34 @@
             android:fontFamily="@font/cafe_air"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/Llayout_complete"
+            android:onClick="onCompleteClicked"
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
             android:orientation="horizontal"
             android:weightSum="7"
             android:layout_marginLeft="20dp">
 
-            <FrameLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.65">
-
-                <ImageView
-                    android:id="@+id/isnotChecked"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/isnotchecked"
-                    android:visibility="visible"
-                    android:layout_marginLeft="5dp"
-                    android:layout_gravity="center_vertical"/>
-                <ImageView
-                    android:id="@+id/isChecked"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ischecked"
-                    android:visibility="invisible"
-                    android:layout_marginLeft="5dp"
-                    android:layout_gravity="center_vertical"/>
-            </FrameLayout>
-
-            <Button
-                android:onClick="onBtnCompleteClicked"
-                android:id="@+id/isComplete"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:fontFamily="@font/cafe_air"
-                android:gravity="center_vertical"
-                android:background="@color/transparent"
-                android:text=" 암기 완료"
+            <ImageView
+                android:id="@+id/iv_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/isnotchecked"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"/>
+            <TextView
+                android:id="@+id/tv_complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text=" 암기 미완료"
+                android:layout_gravity="center_vertical"
+                android:textSize="20dp"
                 android:textColor="@color/dark"
-                android:textSize="20dp" />
+                android:fontFamily="@font/cafe_air"
+                android:clickable="false"/>
 
         </LinearLayout>
 

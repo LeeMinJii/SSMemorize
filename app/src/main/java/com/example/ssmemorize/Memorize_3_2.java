@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListener {
@@ -80,51 +81,75 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    int start=0; // start버튼의 flay_에 따라 단어 조회 시작 번호 (flag_Day=2면 start +=20)
     // start 버튼 클릭 시 Day xx 텍스트뷰  flag 주기, 화면전환
     @Override
     public void onClick(View view) {
-        Intent intent = new Intent(getApplicationContext(),Memorize_3_3.class);
-        switch (view.getId()){
+        Intent intent = new Intent(getApplicationContext(), Memorize_3_3.class);
+        switch (view.getId()) {
             case R.id.btn_start_study1:
-                flag_Day=1;
+                flag_Day = 1;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study2:
-                flag_Day=2;
+                flag_Day = 2;
+                start = 20;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study3:
-                flag_Day=3;
+                flag_Day = 3;
+                start = 40;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study4:
-                flag_Day=4;
+                flag_Day = 4;
+                start = 60;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study5:
-                flag_Day=5;
+                flag_Day = 5;
+                start = 80;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study6:
-                flag_Day=6;
+                flag_Day = 6;
+                start = 100;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study7:
-                flag_Day=7;
+                flag_Day = 7;
+                start = 120;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study8:
-                flag_Day=8;
+                flag_Day = 8;
+                start = 140;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study9:
-                flag_Day=9;
+                flag_Day = 9;
+                start = 160;
                 startActivity(intent);
                 break;
             case R.id.btn_start_study10:
-                flag_Day=10;
+                flag_Day = 10;
+                start = 180;
                 startActivity(intent);
                 break;
         }
+/*
+        int check=0;
+        ImageView imageView = findViewById(R.id.img_check);
+
+        // Day 하나 전체 암기 완료 시 체크버튼 바꾸기
+        for( int i=start ; i < 20; i++) { // 단어 20개씩 보여주므로 20번 확인
+            if (Memorize_3_3.elementaryList.get(start)._id == 0){
+                ++check;
+            }
+        }
+        if(check==20){
+            imageView.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        }
+        else imageView.setImageResource(R.drawable.check_blue); // 20이 안되는 경우 모두 회색체크 띄우기*/
     }
 }

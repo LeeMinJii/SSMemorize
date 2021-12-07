@@ -86,10 +86,11 @@
                     android:textSize="10dp" />
 
                 <ImageView
+                    android:id="@+id/img_check"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.7"
-                    android:src="@drawable/check_blue"
+                    android:src="@drawable/check"
                     android:layout_marginRight="10dp"/>
 
             </LinearLayout>

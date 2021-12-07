@@ -1,4 +1,4 @@
-package com.example.ssmemorize;
+/*package com.example.ssmemorize;
 
 import android.content.Context;
 import android.text.Layout;
@@ -68,4 +68,4 @@ public class Adapter_listview extends BaseAdapter {
 
         listview_MyWord.add(item);
     }
-}
+}*/

@@ -1,5 +1,6 @@
 package com.example.ssmemorize;
 
+import androidx.annotation.ContentView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,10 +22,11 @@ import java.util.ArrayList;
 public class Memorize_3_3 extends AppCompatActivity {
 
     int show_eng_or_kor = 1; // framelayout 영어/한글 화면전환 - 처음 클릭 시 안먹어서 0이아니라 1로.
-    int complete_word = 1; // framelayout 암기완료/미완료 단어
+    //int complete_word = 1; // framelayout 암기완료/미완료 단어
     int index = 1; // 단어 몇개째 외우고 있나 textview 띄우기 위함
-    int Wcursor=0; // Day에 따라 리스트의 몇번째 데이터부터 출력할지 정하는 Word Cursor
-    public static int myword_num = 0; // myword배열에 0번째 부터 넣기
+    public static int Wcursor=0; // Day에 따라 리스트의 몇번째 데이터부터 출력할지 정하는 Word Cursor
+    //public static int myword_num = 0; // myword배열에 0번째 부터 넣기
+    int[] complete = new int[200]; // 단어 암기 완료/미완료 구분 (암기 완료면 0 들어있음)
 
     TextView tv_word_num; // 몇번째 단어인지
     TextView show_day; // Day xx
@@ -32,14 +35,12 @@ public class Memorize_3_3 extends AppCompatActivity {
     TextView tv_english;
     TextView tv_korean;
     // FrameLayout ImageView 선언
-    ImageView img_isnotChecked;
-    ImageView img_isChecked;
+    ImageView iv_complete;
+    TextView tv_complete;
 
-    ArrayList<Elementary> elementaryList;
-    public static ArrayList<Elementary> myword_elementaryList; // 내 단어장 리스트
+    public static ArrayList<Elementary> elementaryList;
+    //public static ArrayList<Elementary> myword_elementaryList; // 내 단어장 리스트
 
-    CheckBox cb_add_myword;
-    CheckBox cb_complete;
     String MyWord_kor; // 내 단어장에 추가
     String MyWord_eng;
 
@@ -48,13 +49,39 @@ public class Memorize_3_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorize33);
 
+        LinearLayout layout_complete = findViewById(R.id.Llayout_complete);
+        View.OnClickListener clickListener = new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (view.getId()){
+                    case R.id.Llayout_complete:
+                        // 미완료 -> 완료
+                        if(complete[Wcursor] !=0 ){ // 현재 암기 미완료 상태이므로 누르면 암기 완료 상태로
+                            complete[Wcursor] = 0;
+                            changeCompleteView();
+                        }
+                        else{ // 완료 -> 미완료
+                            complete[Wcursor] = Wcursor+1;
+                            changeCompleteView();
+                        }
+                        break;
+                }
+            }
+        };
+        layout_complete.setOnClickListener(clickListener);
+
+        // complete배열[0-199]에 1-200넣기
+        for (int i=1; i<=200; i++){
+            complete[i-1]=i;
+        }
+        // 첫 화면에 완료/미완료 조정
+        changeCompleteView();
+
         // DB 불러오기
         elementaryList = init_Load_ElementaryDB();
 
         tv_english = findViewById(R.id.tv_word_eng);
         tv_korean = findViewById(R.id.tv_word_kor);
-        img_isnotChecked = findViewById(R.id.isnotChecked);
-        img_isChecked = findViewById(R.id.isChecked);
         tv_word_num = findViewById(R.id.word_num);
 
         tv_word_num.setText(String.valueOf(index)); // 초기값 : 1(현재 단어)/20(전체단어)
@@ -139,9 +166,6 @@ public class Memorize_3_3 extends AppCompatActivity {
                 myword_num++; // 내 단어장 하나 늘리기
             }
         }); */
-
-
-
     }
 
     // Load DataBase
@@ -161,6 +185,9 @@ public class Memorize_3_3 extends AppCompatActivity {
         // 현재 단어 개수 증가 2/20, 3/20 ...
         ++index;
         ++Wcursor;
+
+        // 다음 단어 볼 떄 암기 완료/미완료 상태 띄우기
+        changeCompleteView();
 
         // 20개 넘었으면 Day 하나 학습 종료 창으로 넘어가기
         if(index == 21){
@@ -187,6 +214,9 @@ public class Memorize_3_3 extends AppCompatActivity {
     public void onBtnPrevClicked(View view){
         --index; // 이전 번호
         --Wcursor; // 이전 단어띄우기
+
+        // 다음 단어 볼 떄 암기 완료/미완료 상태 띄우기
+        changeCompleteView();
         /*  클릭해야 바뀌니까 클릭안해도 바뀌게해야함
         // 처음 단어에는 이전 버튼 안뜨게
         Button btn_prev = findViewById(R.id.btn_prev);
@@ -232,18 +262,18 @@ public class Memorize_3_3 extends AppCompatActivity {
             show_eng_or_kor = 0;
         }
     }
-    // 단어 완료/미완료 전환
-    public void onBtnCompleteClicked(View view){changeCompleteView();}
-    private void changeCompleteView(){
-        if(complete_word == 0){
-            img_isnotChecked.setVisibility(View.VISIBLE);
-            img_isChecked.setVisibility(View.INVISIBLE);
-            complete_word = 1;
-        }
-        else if(complete_word == 1){
-            img_isnotChecked.setVisibility(View.INVISIBLE);
-            img_isChecked.setVisibility(View.VISIBLE);
-            complete_word = 0;
+    // 단어 완료/미완료 --> 그냥 id가 0이면 visibility 체크완료버튼으로 바꾸고 0이 아니면 기본버튼 뜨게
+    private void changeCompleteView() {
+        tv_complete = findViewById(R.id.tv_complete);
+        iv_complete = findViewById(R.id.iv_complete);
+
+        if (complete[Wcursor] == 0) { // 암기 완료
+            tv_complete.setText(" 암기 완료");
+            iv_complete.setImageResource(R.drawable.ischecked);
+
+        } else { // 암기 미완료
+            tv_complete.setText(" 암기 미완료");
+            iv_complete.setImageResource(R.drawable.isnotchecked);
         }
     }
 }
