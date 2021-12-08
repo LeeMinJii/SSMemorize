@@ -3,32 +3,40 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/drawable/dege.xml" value="0.1675925925925926" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game41.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game412.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game413.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game422.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game423.xml" value="0.36614583333333334" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game432.xml" value="0.22" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game433.xml" value="0.2046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game434.xml" value="0.17603850050658562" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game432.xml" value="0.1" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game44.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game4_main.xml" value="0.2857789855072464" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_login.xml" value="0.33" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
+        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_login.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize31.xml" value="0.25" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize32.xml" value="0.33" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize33.xml" value="0.2046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize34.xml" value="0.2046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize35.xml" value="0.2046875" />
         <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize3_main.xml" value="0.2046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page511.xml" value="0.33" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page521.xml" value="0.2046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page522.xml" value="0.2046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page5_main.xml" value="0.2046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_sign_up.xml" value="0.2046875" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_start_app.xml" value="0.1" />
-        <entry key="..\:/Users/User/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/listview_myword.xml" value="0.18489583333333334" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/drawable/back.xml" value="0.37552083333333336" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game41.xml" value="0.1" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game412.xml" value="0.2234375" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game413.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game422.xml" value="0.2234375" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game433.xml" value="0.2234375" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game44.xml" value="0.2234375" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_game4_main.xml" value="0.2234375" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize31.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize32.xml" value="0.1" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize33.xml" value="0.1" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize34.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize35.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_memorize3_main.xml" value="0.20052083333333334" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page511.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page521.xml" value="0.22" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page522.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_page5_main.xml" value="0.19322916666666667" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_my_word_list.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/layout/activity_sign_up.xml" value="0.17477203647416414" />
+        <entry key="..\:/Users/yes01/AndroidStudioProjects/SSMemorize/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.37552083333333336" />
       </map>
     </option>
   </component>
