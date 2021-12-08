@@ -1,17 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Game_4_3_3">
+    android:stretchColumns="0, 1, 2"
+    android:padding="18dp"
+    android:background="#D6EAF8">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="197dp"
-        android:layout_height="123dp"
-        android:text="cardgame"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="80dp"
-        tools:ignore="MissingConstraints" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="카드 게임"
+        android:textSize="30dp"
+        android:fontFamily="@font/cafe"
+        android:gravity="center" />
+
+    <TableRow>
+        <Button
+            android:id="@+id/tv_card_eng1"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:text="apple"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/tv_card_kor1"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="Button1"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/white"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/tv_card_kor2"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="Button2"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/tv_card_eng2"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:text="Button3"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/white"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/tv_card_eng3"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:text="Button4"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/tv_card_kor3"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="Button5"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/white"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/tv_card_kor4"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="Button6"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/tv_card_eng4"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:text="Button7"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/white"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/tv_card_eng5"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:text="Button"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/tv_card_kor5"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="Button"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/white"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/tv_card_kor6"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="Button"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/white"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/tv_card_eng6"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:backgroundTint="@color/dark"
+            android:fontFamily="@font/cafe"
+            android:text="Button"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/tv_card_eng7"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:text="Button"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/tv_card_kor7"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="Button"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/white"/>
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:id="@+id/tv_card_kor8"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="3dp"
+            android:text="Button"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/white"/>
+
+        <Button
+            android:id="@+id/tv_card_eng8"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_margin="3dp"
+            android:text="Button"
+            android:textSize="18dp"
+            android:fontFamily="@font/cafe"
+            android:backgroundTint="@color/dark"
+            android:textColor="@color/white"/>
+    </TableRow>
+
+</TableLayout>

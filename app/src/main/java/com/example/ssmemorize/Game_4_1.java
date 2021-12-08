@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View.OnClickListener;
 
@@ -16,18 +17,10 @@ import java.util.ArrayList;
 
 public class Game_4_1 extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game41);
-
-        Memorize_3_3.elementaryList.get(Memorize_3_3.Wcursor).english;
-
-        //textview뷰 layout에 띄우기
-        String word_eng = elementaryList.get(Wcursor).english;
-        tv_english.setText(word_eng);
 
 
         // 타이틀바 없애기
@@ -49,11 +42,12 @@ public class Game_4_1 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Game_4_3_3.class);
+                Intent intent = new Intent(getApplicationContext(),Game_4_3_2.class);
                 startActivity(intent);
             }
         });
 
+        /*
         //중등 영단어 게임
         Button middle_game = (Button)findViewById(R.id.middle_game);
         middle_game.setOnClickListener(new OnClickListener() {
@@ -108,6 +102,8 @@ public class Game_4_1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+         */
     }
 
 
