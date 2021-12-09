@@ -23,8 +23,9 @@
             android:text="apple"
             android:textSize="18dp"
             android:fontFamily="@font/cafe"
-            android:backgroundTint="@color/dark"
-            android:textColor="@color/white"/>
+            android:backgroundTint="#666666"
+            android:textColor="@color/white"
+            android:onClick="onClick"/>
 
         <Button
             android:id="@+id/tv_card_kor1"
@@ -56,7 +57,7 @@
             android:text="Button3"
             android:textSize="18dp"
             android:fontFamily="@font/cafe"
-            android:backgroundTint="@color/dark"
+            android:backgroundTint="#666666"
             android:textColor="@color/white"/>
     </TableRow>
 
@@ -69,7 +70,7 @@
             android:text="Button4"
             android:textSize="18dp"
             android:fontFamily="@font/cafe"
-            android:backgroundTint="@color/dark"
+            android:backgroundTint="#666666"
             android:textColor="@color/white"/>
 
         <Button
@@ -102,7 +103,7 @@
             android:text="Button7"
             android:textSize="18dp"
             android:fontFamily="@font/cafe"
-            android:backgroundTint="@color/dark"
+            android:backgroundTint="#666666"
             android:textColor="@color/white"/>
     </TableRow>
 
@@ -115,7 +116,7 @@
             android:text="Button"
             android:textSize="18dp"
             android:fontFamily="@font/cafe"
-            android:backgroundTint="@color/dark"
+            android:backgroundTint="#666666"
             android:textColor="@color/white"/>
 
         <Button
@@ -146,7 +147,7 @@
             android:layout_width="wrap_content"
             android:layout_height="65dp"
             android:layout_margin="3dp"
-            android:backgroundTint="@color/dark"
+            android:backgroundTint="#666666"
             android:fontFamily="@font/cafe"
             android:text="Button"
             android:textColor="@color/white"
@@ -162,7 +163,7 @@
             android:text="Button"
             android:textSize="18dp"
             android:fontFamily="@font/cafe"
-            android:backgroundTint="@color/dark"
+            android:backgroundTint="#666666"
             android:textColor="@color/white"/>
 
         <Button
@@ -195,7 +196,7 @@
             android:text="Button"
             android:textSize="18dp"
             android:fontFamily="@font/cafe"
-            android:backgroundTint="@color/dark"
+            android:backgroundTint="#666666"
             android:textColor="@color/white"/>
     </TableRow>
 
