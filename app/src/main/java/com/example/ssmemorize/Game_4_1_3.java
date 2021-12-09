@@ -3,6 +3,7 @@ package com.example.ssmemorize;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,9 +18,9 @@ public class Game_4_1_3 extends AppCompatActivity {
 
     public static ArrayList<Elementary> elementaryList;
 
-    public static int count = 0; //몇 번째 문제인지
-    public static int correct = 0;  //맞은 문제 개수
-    public static int Wcursor = -1;    //출력할 단어 번호
+    public static int count; //몇 번째 문제인지
+    public static int correct;  //맞은 문제 개수
+    public static int Wcursor;    //출력할 단어 번호
     public static int answer;   //정답 선택지 번호
 
     int[] question = new int[20];   //랜덤으로 뽑은 문제 단어 번호
@@ -49,6 +50,10 @@ public class Game_4_1_3 extends AppCompatActivity {
         btn_game1_content3 = findViewById(R.id.btn_game1_content3);
         btn_game1_content4 = findViewById(R.id.btn_game1_content4);
 
+        count=0;
+        correct=0;
+        Wcursor=-1;
+
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
@@ -77,21 +82,50 @@ public class Game_4_1_3 extends AppCompatActivity {
             }
         }
 
-//        첫 번째 문제 띄우기
+        //첫 번째 문제 띄우기
         newQuestion();
-//
+
 //        //선택지 고르면 다음 문제
-//        btn_game1_content1.setOnClickListener(new View.OnClickListener(){
-//
-//            @Override
-//            public void onClick(View view) {
-//                count++;
-//                if(answer==1){
-//                    correct++;
-//
-//                }
-//            }
-//        });
+        btn_game1_content1.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                count++;
+                if(answer==0)
+                    correct++;
+                newQuestion();
+            }
+        });
+        btn_game1_content2.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                count++;
+                if(answer==1)
+                    correct++;
+                newQuestion();
+            }
+        });
+        btn_game1_content3.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                count++;
+                if(answer==2)
+                    correct++;
+                newQuestion();
+            }
+        });
+        btn_game1_content4.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+                count++;
+                if(answer==3)
+                    correct++;
+                newQuestion();
+            }
+        });
 
     }
 
@@ -109,6 +143,12 @@ public class Game_4_1_3 extends AppCompatActivity {
 
 //    새 문제 설정
     private void newQuestion(){
+        //20문제 다 풀면 점수 화면으로
+        if(count==20){
+            Intent intent = new Intent(getApplicationContext(), Game_4_4.class);
+            startActivity(intent);
+        }
+
         //문제(한글) 띄우기
         Wcursor = question[count];
         word_question = elementaryList.get(Wcursor).korean;

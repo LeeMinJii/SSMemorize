@@ -8,12 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
-public class Game_4_4 extends AppCompatActivity {
-
-    public static int score;
-    TextView tv_game_score;
+public class Game_4_1_4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,16 +29,5 @@ public class Game_4_4 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-//        show_score();
     }
-
-    //점수 띄우기
-//    public void show_score(){
-//        tv_game_score = findViewById(R.id.tv_game_score);
-//
-//        score = 20*Game_4_1_3.correct;
-//
-//        tv_game_score.setText(score);
-//    }
 }
