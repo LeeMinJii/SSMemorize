@@ -55,8 +55,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:hint="이름을 입력해주세요."
-        android:paddingLeft="30dp"
-        android:fontFamily="@font/cafe_air"/>
+        android:paddingLeft="30dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -81,8 +80,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:hint="이메일을 입력해주세요."
-        android:paddingLeft="30dp"
-        android:fontFamily="@font/cafe_air"/>
+        android:paddingLeft="30dp"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -108,7 +106,6 @@
         android:layout_marginRight="15dp"
         android:hint="비밀번호를 입력해주세요."
         android:paddingLeft="30dp"
-        android:fontFamily="@font/cafe_air"
         android:inputType="textPassword"/>
 
     <TextView
@@ -134,7 +131,6 @@
         android:layout_marginRight="15dp"
         android:hint="비밀번호 확인"
         android:paddingLeft="30dp"
-        android:fontFamily="@font/cafe_air"
         android:inputType="textPassword"/>
 
     <Button

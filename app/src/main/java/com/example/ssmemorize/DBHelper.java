@@ -1,5 +1,6 @@
 package com.example.ssmemorize;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -18,7 +19,7 @@ import java.util.List;
 //private static String ele_word ="/data/data/com.example.test/databases/"; // Database name
 
 public class DBHelper extends SQLiteOpenHelper {
-    public static final int DATABASE_VERSION = 1;
+    public static int DATABASE_VERSION = 1;
     private static String TAG = "DBHelper";
     //private static String wordDB = "ele_word.db";
 
@@ -26,9 +27,8 @@ public class DBHelper extends SQLiteOpenHelper {
     private static String databaseName = "elementary_Word.db"; // 데이터베이스 이름
     private static String tableName = "elementary_Word"; // 테이블 이름
 
-    private SQLiteDatabase mDataBase;
+    public static SQLiteDatabase mDataBase;
     private final Context mContext;
-
 
     public DBHelper(Context context) {
         super(context, "databaseName", null, DATABASE_VERSION);
@@ -146,5 +146,13 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onConfigure(SQLiteDatabase db) {
         super.onConfigure(db);
         db.disableWriteAheadLogging();
+    }
+
+    // 테이블 _id값 바꾸기
+    public static void UpdatetoZero(String english, int _id){
+        //this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("_id",_id); // 300으로
+        mDataBase.update(tableName,contentValues,"_id = ?", new String[]{english});
     }
 }
