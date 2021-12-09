@@ -24,24 +24,30 @@ public class Game_4_1_3 extends AppCompatActivity {
 
     int[] question = new int[20];   //랜덤으로 뽑은 문제 단어 번호
     int[] content = new int[3];  //랜덤으로 뽑은 선택지 단어 번호
+    
+    public static String word_question;
+    public static String content1;
+    public static String content2;
+    public static String content3;
+    public static String content4;
 
-    TextView tv_game1_word = findViewById(R.id.tv_game1_word);
-    Button btn_game1_content1 = findViewById(R.id.btn_game1_content1);
-    Button btn_game1_content2 = findViewById(R.id.btn_game1_content2);
-    Button btn_game1_content3 = findViewById(R.id.btn_game1_content3);
-    Button btn_game1_content4 = findViewById(R.id.btn_game1_content4);
-
-    String word_question;
-    String content1;
-    String content2;
-    String content3;
-    String content4;
+    TextView tv_game1_word;
+    Button btn_game1_content1;
+    Button btn_game1_content2;
+    Button btn_game1_content3;
+    Button btn_game1_content4;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game413);
+
+        tv_game1_word = findViewById(R.id.tv_game1_word);
+        btn_game1_content1 = findViewById(R.id.btn_game1_content1);
+        btn_game1_content2 = findViewById(R.id.btn_game1_content2);
+        btn_game1_content3 = findViewById(R.id.btn_game1_content3);
+        btn_game1_content4 = findViewById(R.id.btn_game1_content4);
 
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
@@ -62,29 +68,30 @@ public class Game_4_1_3 extends AppCompatActivity {
         //랜덤으로 문제 20개 뽑아서 배열에 저장
         Random rand1 = new Random();
         for(int i=0; i<20; i++){
-            question[i] = rand1.nextInt(199);
+            question[i] = rand1.nextInt(200);
             for(int j=0; j<i;j++){
-                if(question[j]==question[j]){
+                if(question[j]==question[i]){
                     i--;
                     break;
                 }
             }
         }
 
-        //첫 번째 문제 띄우기
+//        첫 번째 문제 띄우기
         newQuestion();
-
-        //선택지 고르면 다음 문제
-        btn_game1_content1.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View view) {
-                count++;
-                if(answer==1){
-                    //여기부터 다시 짜기
-                }
-            }
-        });
+//
+//        //선택지 고르면 다음 문제
+//        btn_game1_content1.setOnClickListener(new View.OnClickListener(){
+//
+//            @Override
+//            public void onClick(View view) {
+//                count++;
+//                if(answer==1){
+//                    correct++;
+//
+//                }
+//            }
+//        });
 
     }
 
@@ -100,7 +107,7 @@ public class Game_4_1_3 extends AppCompatActivity {
         return elementaryList;
     }
 
-    //새 문제 설정
+//    새 문제 설정
     private void newQuestion(){
         //문제(한글) 띄우기
         Wcursor = question[count];
@@ -109,12 +116,12 @@ public class Game_4_1_3 extends AppCompatActivity {
 
         //정답 선택지 번호 결정
         Random rand2 = new Random();
-        answer = rand2.nextInt(3);
+        answer = rand2.nextInt(4);
 
         //틀린 선택지 3개 랜덤으로 뽑기
         for(int j=0; j<3;j++){
             Random rand3 = new Random();
-            content[j] = rand3.nextInt(199);
+            content[j] = rand3.nextInt(200);
             if(content[j]!=question[count]){
                 for(int k=0; k<j;k++){
                     if(content[j]==content[k]){
@@ -128,30 +135,50 @@ public class Game_4_1_3 extends AppCompatActivity {
         }
 
         //선택지 띄우기
-        if(answer==1){
+        if(answer==0){
             content1 = elementaryList.get(Wcursor).english;
             content2 = elementaryList.get(content[0]).english;
             content3 = elementaryList.get(content[1]).english;
             content4 = elementaryList.get(content[2]).english;
 
+            btn_game1_content1.setText(content1);
+            btn_game1_content2.setText(content2);
+            btn_game1_content3.setText(content3);
+            btn_game1_content4.setText(content4);
+
         }
-        else if(answer==2){
+        else if(answer==1){
             content1 = elementaryList.get(content[0]).english;
             content2 = elementaryList.get(Wcursor).english;
             content3 = elementaryList.get(content[1]).english;
             content4 = elementaryList.get(content[2]).english;
+
+            btn_game1_content1.setText(content1);
+            btn_game1_content2.setText(content2);
+            btn_game1_content3.setText(content3);
+            btn_game1_content4.setText(content4);
         }
-        else if(answer==3){
+        else if(answer==2){
             content1 = elementaryList.get(content[0]).english;
             content2 = elementaryList.get(content[1]).english;
             content3 = elementaryList.get(Wcursor).english;
             content4 = elementaryList.get(content[2]).english;
+
+            btn_game1_content1.setText(content1);
+            btn_game1_content2.setText(content2);
+            btn_game1_content3.setText(content3);
+            btn_game1_content4.setText(content4);
         }
-        else if(answer==4){
+        else if(answer==3){
             content1 = elementaryList.get(content[0]).english;
             content2 = elementaryList.get(content[1]).english;
             content3 = elementaryList.get(content[2]).english;
             content4 = elementaryList.get(Wcursor).english;
+
+            btn_game1_content1.setText(content1);
+            btn_game1_content2.setText(content2);
+            btn_game1_content3.setText(content3);
+            btn_game1_content4.setText(content4);
         }
     }
 }
