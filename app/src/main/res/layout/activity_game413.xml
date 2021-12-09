@@ -17,16 +17,16 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_below="@+id/btn_back"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        android:text="휴일, 휴가"
-        android:textSize="30dp"
-        android:textColor="@color/black"
         android:layout_weight="2.5"
-        android:gravity="center"
         android:background="@drawable/thin_gray"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe"
+        android:gravity="center"
+        android:text="휴일, 휴가"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
 
     <Button
         android:id="@+id/btn_game1_content1"
