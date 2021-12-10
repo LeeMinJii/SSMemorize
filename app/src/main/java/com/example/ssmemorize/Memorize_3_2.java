@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Switch;
 import android.widget.TextView;
 
 public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListener {
@@ -136,20 +137,80 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
                 start = 180;
                 startActivity(intent);
                 break;
+
+            case R.id.reset1:
+            case R.id.reset2:
+            case R.id.reset3:
+            case R.id.reset4:
+            case R.id.reset5:
+            case R.id.reset6:
+            case R.id.reset7:
+            case R.id.reset8:
+            case R.id.reset9:
+            case R.id.reset10:
+                init_array(Start_App.complete);
         }
-/*
+
         int check=0;
-        ImageView imageView = findViewById(R.id.img_check);
+        ImageView imageView1 = findViewById(R.id.img_check1);
+        ImageView imageView2 = findViewById(R.id.img_check2);
+        ImageView imageView3 = findViewById(R.id.img_check3);
+        ImageView imageView4 = findViewById(R.id.img_check4);
+        ImageView imageView5 = findViewById(R.id.img_check5);
+        ImageView imageView6 = findViewById(R.id.img_check6);
+        ImageView imageView7 = findViewById(R.id.img_check7);
+        ImageView imageView8 = findViewById(R.id.img_check8);
+        ImageView imageView9 = findViewById(R.id.img_check9);
+        ImageView imageView10 = findViewById(R.id.img_check10);
 
         // Day 하나 전체 암기 완료 시 체크버튼 바꾸기
         for( int i=start ; i < 20; i++) { // 단어 20개씩 보여주므로 20번 확인
-            if (Memorize_3_3.elementaryList.get(start)._id == 0){
+            if (Start_App.complete[i] == 0){
                 ++check;
             }
         }
+
         if(check==20){
-            imageView.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+            switch (start){
+                case 0:
+                    imageView1.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 20:
+                    imageView2.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 40:
+                    imageView3.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 60:
+                    imageView4.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 80:
+                    imageView5.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 100:
+                    imageView6.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 120:
+                    imageView7.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 140:
+                    imageView8.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 160:
+                    imageView9.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+                case 180:
+                    imageView10.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+                    break;
+
+            }
         }
-        else imageView.setImageResource(R.drawable.check_blue); // 20이 안되는 경우 모두 회색체크 띄우기*/
+        else imageView1.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+    }
+
+    private void init_array(int[] arr){
+        for (int i=0; i<200; i++){
+            arr[i]=i+1;
+        }
     }
 }

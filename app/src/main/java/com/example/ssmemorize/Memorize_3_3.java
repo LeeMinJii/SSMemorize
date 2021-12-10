@@ -4,6 +4,7 @@ import androidx.annotation.ContentView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,11 +23,9 @@ import java.util.ArrayList;
 public class Memorize_3_3 extends AppCompatActivity {
 
     int show_eng_or_kor = 1; // framelayout 영어/한글 화면전환 - 처음 클릭 시 안먹어서 0이아니라 1로.
-    //int complete_word = 1; // framelayout 암기완료/미완료 단어
     int index = 1; // 단어 몇개째 외우고 있나 textview 띄우기 위함
     public static int Wcursor=0; // Day에 따라 리스트의 몇번째 데이터부터 출력할지 정하는 Word Cursor
-    //public static int myword_num = 0; // myword배열에 0번째 부터 넣기
-    int[] complete = new int[200];
+    public static int[] complete = new int[200]; // 단어 암기 완료/미완료 구분
 
     TextView tv_word_num; // 몇번째 단어인지
     TextView show_day; // Day xx
@@ -49,36 +48,17 @@ public class Memorize_3_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorize33);
 
-        LinearLayout layout_complete = findViewById(R.id.Llayout_complete);
-        View.OnClickListener clickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switch (view.getId()){
-                    case R.id.Llayout_complete:
-                        // 미완료 -> 완료
-                        if(complete[Wcursor] !=0 ){ // 현재 암기 미완료 상태이므로 누르면 암기 완료 상태로
-                            complete[Wcursor] = 0;
-                            changeCompleteView();
-                        }
-                        else{ // 완료 -> 미완료
-                            complete[Wcursor] = Wcursor+1;
-                            changeCompleteView();
-                        }
-                        break;
-                }
-            }
-        };
-        layout_complete.setOnClickListener(clickListener);
-
+/*
         // complete배열[0-199]에 1-200넣기
-        for (int i=1; i<=200; i++){
-            complete[i-1]=i;
+        for (int i=0; i<200; i++){
+            complete[i]=i+1;
         }
-        // 첫 화면에 완료/미완료 조정
-        changeCompleteView();
-
+*/
         // DB 불러오기
         elementaryList = init_Load_ElementaryDB();
+
+        // 첫 화면에 완료/미완료 조정
+        changeCompleteView();
 
         tv_english = findViewById(R.id.tv_word_eng);
         tv_korean = findViewById(R.id.tv_word_kor);
@@ -168,6 +148,7 @@ public class Memorize_3_3 extends AppCompatActivity {
         }); */
     }
 
+
     // Load DataBase
     private ArrayList<Elementary> init_Load_ElementaryDB() {
         DBHelper DBHelper = new DBHelper(getApplicationContext());
@@ -178,6 +159,27 @@ public class Memorize_3_3 extends AppCompatActivity {
 
         DBHelper.close();
         return elementaryList;
+    }
+
+    public void onBtnCompleteCliked(View view){
+        //Elementary ele = new Elementary();
+
+        switch (view.getId()){
+            case R.id.btn_complete:
+                // 미완료 -> 완료
+                if( Start_App.complete[Wcursor] !=0){ // 현재 암기 미완료 상태이므로 누르면 암기 완료 상태로
+                    Start_App.complete[Wcursor] = 0;
+                    //DBHelper.DATABASE_VERSION++;
+                    changeCompleteView();
+                }
+                else{ // 완료 -> 미완료
+                    Start_App.complete[Wcursor] = Wcursor+1; // 다시 원래 _id값 넣기
+                    //DBHelper.DATABASE_VERSION++;
+                    //complete[Wcursor] = Wcursor+1;
+                    changeCompleteView();
+                }
+                break;
+        }
     }
 
     // btn_next 클릭 시 다음 단어로 넘어가기
@@ -265,9 +267,9 @@ public class Memorize_3_3 extends AppCompatActivity {
     // 단어 완료/미완료 --> 그냥 id가 0이면 visibility 체크완료버튼으로 바꾸고 0이 아니면 기본버튼 뜨게
     private void changeCompleteView() {
         tv_complete = findViewById(R.id.tv_complete);
-        iv_complete = findViewById(R.id.iv_complete);
+        iv_complete = findViewById(R.id.btn_complete);
 
-        if (complete[Wcursor] == 0) { // 암기 완료
+        if (Start_App.complete[Wcursor] == 0 ) { // 암기 완료
             tv_complete.setText(" 암기 완료");
             iv_complete.setImageResource(R.drawable.ischecked);
 

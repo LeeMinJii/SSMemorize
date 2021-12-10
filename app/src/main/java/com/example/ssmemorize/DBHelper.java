@@ -42,7 +42,6 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-
     }
     // 데이터베이스 파일 열기
     public boolean OpenDatabaseFile() throws SQLException {
@@ -146,13 +145,5 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onConfigure(SQLiteDatabase db) {
         super.onConfigure(db);
         db.disableWriteAheadLogging();
-    }
-
-    // 테이블 _id값 바꾸기
-    public static void UpdatetoZero(String english, int _id){
-        //this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put("_id",_id); // 300으로
-        mDataBase.update(tableName,contentValues,"_id = ?", new String[]{english});
     }
 }
