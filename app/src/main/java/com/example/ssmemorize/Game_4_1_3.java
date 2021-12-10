@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -91,8 +92,12 @@ public class Game_4_1_3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 count++;
-                if(answer==0)
+                if(answer==0) {
                     correct++;
+                    Toast.makeText(Game_4_1_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(Game_4_1_3.this,"오답입니다.", Toast.LENGTH_SHORT).show();
                 newQuestion();
             }
         });
@@ -101,8 +106,12 @@ public class Game_4_1_3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 count++;
-                if(answer==1)
+                if(answer==1) {
                     correct++;
+                    Toast.makeText(Game_4_1_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(Game_4_1_3.this,"오답입니다.", Toast.LENGTH_SHORT).show();
                 newQuestion();
             }
         });
@@ -111,8 +120,12 @@ public class Game_4_1_3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 count++;
-                if(answer==2)
+                if(answer==2) {
                     correct++;
+                    Toast.makeText(Game_4_1_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(Game_4_1_3.this,"오답입니다.", Toast.LENGTH_SHORT).show();
                 newQuestion();
             }
         });
@@ -121,8 +134,12 @@ public class Game_4_1_3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 count++;
-                if(answer==3)
+                if(answer==3) {
                     correct++;
+                    Toast.makeText(Game_4_1_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(Game_4_1_3.this,"오답입니다.", Toast.LENGTH_SHORT).show();
                 newQuestion();
             }
         });
@@ -142,7 +159,7 @@ public class Game_4_1_3 extends AppCompatActivity {
     }
 
 //    새 문제 설정
-    private void newQuestion(){
+    public void newQuestion(){
         //20문제 다 풀면 점수 화면으로
         if(count==20){
             Intent intent = new Intent(getApplicationContext(), Game_4_4.class);
