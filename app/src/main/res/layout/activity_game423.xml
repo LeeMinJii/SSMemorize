@@ -13,25 +13,26 @@
         android:layout_marginLeft="15dp"/>
 
     <TextView
-        android:id="@+id/game1_word"
+        android:id="@+id/tv_game2_word"
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_below="@+id/btn_back"
+        android:layout_marginLeft="25dp"
         android:layout_marginTop="150dp"
         android:layout_marginRight="25dp"
-        android:layout_marginLeft="25dp"
-        android:text="휴일, 휴가"
-        android:textSize="30dp"
-        android:textColor="@color/black"
         android:layout_weight="2.5"
-        android:gravity="center"
         android:background="@drawable/thin_gray"
-        android:fontFamily="@font/cafe"/>
+        android:fontFamily="@font/cafe"
+        android:gravity="center"
+        android:text="휴일, 휴가"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
 
     <EditText
+        android:id="@+id/game2_answer"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@+id/game1_word"
+        android:layout_below="@+id/tv_game2_word"
         android:layout_marginTop="50dp"
         android:layout_marginRight="25dp"
         android:layout_marginLeft="25dp"
@@ -41,5 +42,21 @@
         android:textColor="@color/white"
         android:paddingLeft="20dp"
         android:fontFamily="@font/cafe_air"/>
+
+    <Button
+        android:id="@+id/btn_answer_end"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/game2_answer"
+        android:layout_alignRight="@+id/game2_answer"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:backgroundTint="@color/gray"
+        android:fontFamily="@font/cafe"
+        android:text="입력 완료"
+        android:textColor="@color/dark"
+        android:textSize="17dp" />
 
 </RelativeLayout>

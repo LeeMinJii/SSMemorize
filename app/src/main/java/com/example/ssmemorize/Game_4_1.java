@@ -42,8 +42,18 @@ public class Game_4_1 extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Game_4_3_2.class);
-                startActivity(intent);
+                if(Game_4_main.sig_gametype==1) {
+                    Intent intent1 = new Intent(getApplicationContext(), Game_4_1_2.class);
+                    startActivity(intent1);
+                }
+                else if(Game_4_main.sig_gametype==2){
+                    Intent intent2 = new Intent(getApplicationContext(), Game_4_2_2.class);
+                    startActivity(intent2);
+                }
+                else if(Game_4_main.sig_gametype==3){
+                    Intent intent3 = new Intent(getApplicationContext(), Game_4_3_2.class);
+                    startActivity(intent3);
+                }
             }
         });
 
