@@ -33,7 +33,7 @@ public class Game_4_1_4 extends AppCompatActivity {
         btn_game_end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),Game_4_1.class);
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
             }
         });
