@@ -22,9 +22,7 @@ public class MyPage_5_1_1 extends AppCompatActivity {
         ImageButton btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                finish();
-            }
+            public void onClick(View view) { finish(); }
         });
     }
 
