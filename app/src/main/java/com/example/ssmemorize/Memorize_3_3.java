@@ -48,17 +48,8 @@ public class Memorize_3_3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorize33);
 
-/*
-        // complete배열[0-199]에 1-200넣기
-        for (int i=0; i<200; i++){
-            complete[i]=i+1;
-        }
-*/
         // DB 불러오기
         elementaryList = init_Load_ElementaryDB();
-
-        // 첫 화면에 완료/미완료 조정
-        changeCompleteView();
 
         tv_english = findViewById(R.id.tv_word_eng);
         tv_korean = findViewById(R.id.tv_word_kor);
@@ -69,15 +60,6 @@ public class Memorize_3_3 extends AppCompatActivity {
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
-
-        // 뒤로 가기 버튼
-        ImageButton btn_back = findViewById(R.id.btn_back);
-        btn_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
 
         // Day xx 텍스트뷰, 커서 알맞게 초기화
         show_day = findViewById(R.id.show_day);
@@ -129,6 +111,9 @@ public class Memorize_3_3 extends AppCompatActivity {
 
         String word_kor = elementaryList.get(Wcursor).korean; // Day xx의 첫번째 단어 띄우기
         tv_korean.setText(word_kor);
+
+        // 첫 화면에 완료/미완료 조정
+        changeCompleteView();
 
         /*
         // 체크박스 내 단어장에 추가

@@ -22,6 +22,82 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorize32);
 
+        // 체크버튼 바꾸기
+        int check=0;
+        ImageView imageView1 = findViewById(R.id.img_check1);
+        ImageView imageView2 = findViewById(R.id.img_check2);
+        ImageView imageView3 = findViewById(R.id.img_check3);
+        ImageView imageView4 = findViewById(R.id.img_check4);
+        ImageView imageView5 = findViewById(R.id.img_check5);
+        ImageView imageView6 = findViewById(R.id.img_check6);
+        ImageView imageView7 = findViewById(R.id.img_check7);
+        ImageView imageView8 = findViewById(R.id.img_check8);
+        ImageView imageView9 = findViewById(R.id.img_check9);
+        ImageView imageView10 = findViewById(R.id.img_check10);
+
+        int[] memorize = new int[10]; // Day별 암기 완료 여부
+        int k=0;
+
+        // Day 1-10까지 각 20개의 단어의 암기 완료 여부 체크 -> memorize배열에 넣기
+        for (int i = 0; i <= 180; i+=20){
+            for (int j=0; j<20; j++){
+                if (Start_App.complete[j+i]==0)
+                    check++;
+            }
+            if (check==20) {
+                memorize[k]=0; // 20개 다 암기완료면 0넣기
+                k++;
+                check = 0;
+            }
+            else {
+                memorize[k]=1;
+                k++;
+                check = 0;
+            }
+        }
+
+        // Day별 암기 완료 여부에 따라 체크 버튼 색 띄우기
+        if (memorize[0]==0)
+            imageView1.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView1.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[1]==0)
+            imageView2.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView2.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[2]==0)
+            imageView3.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView3.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[3]==0)
+            imageView4.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView4.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[4]==0)
+            imageView5.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView5.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[5]==0)
+            imageView6.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView6.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[6]==0)
+            imageView7.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView7.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[7]==0)
+            imageView8.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView8.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[8]==0)
+            imageView9.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView9.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+        if (memorize[9]==0)
+            imageView10.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
+        else imageView10.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+
+
         // 뒤로 가기 버튼
         ImageButton btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +128,28 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
         btn_start_study9.setOnClickListener(this);
         Button btn_start_study10 = findViewById(R.id.btn_start_study10);
         btn_start_study10.setOnClickListener(this);
-        
+
+        // reset버튼
+        Button reset1 = findViewById(R.id.reset1);
+        reset1.setOnClickListener(this);
+        Button reset2 = findViewById(R.id.reset2);
+        reset2.setOnClickListener(this);
+        Button reset3 = findViewById(R.id.reset3);
+        reset3.setOnClickListener(this);
+        Button reset4 = findViewById(R.id.reset4);
+        reset4.setOnClickListener(this);
+        Button reset5 = findViewById(R.id.reset5);
+        reset5.setOnClickListener(this);
+        Button reset6 = findViewById(R.id.reset6);
+        reset6.setOnClickListener(this);
+        Button reset7 = findViewById(R.id.reset7);
+        reset7.setOnClickListener(this);
+        Button reset8 = findViewById(R.id.reset8);
+        reset8.setOnClickListener(this);
+        Button reset9 = findViewById(R.id.reset9);
+        reset9.setOnClickListener(this);
+        Button reset10 = findViewById(R.id.reset10);
+        reset10.setOnClickListener(this);
 
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
@@ -83,6 +180,7 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
     }
 
     int start=0; // start버튼의 flay_에 따라 단어 조회 시작 번호 (flag_Day=2면 start +=20)
+    boolean flag_reset=false;
     // start 버튼 클릭 시 Day xx 텍스트뷰  flag 주기, 화면전환
     @Override
     public void onClick(View view) {
@@ -137,7 +235,6 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
                 start = 180;
                 startActivity(intent);
                 break;
-
             case R.id.reset1:
             case R.id.reset2:
             case R.id.reset3:
@@ -148,69 +245,13 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
             case R.id.reset8:
             case R.id.reset9:
             case R.id.reset10:
-                init_array(Start_App.complete);
+                flag_reset = true;
+                break;
         }
-
-        int check=0;
-        ImageView imageView1 = findViewById(R.id.img_check1);
-        ImageView imageView2 = findViewById(R.id.img_check2);
-        ImageView imageView3 = findViewById(R.id.img_check3);
-        ImageView imageView4 = findViewById(R.id.img_check4);
-        ImageView imageView5 = findViewById(R.id.img_check5);
-        ImageView imageView6 = findViewById(R.id.img_check6);
-        ImageView imageView7 = findViewById(R.id.img_check7);
-        ImageView imageView8 = findViewById(R.id.img_check8);
-        ImageView imageView9 = findViewById(R.id.img_check9);
-        ImageView imageView10 = findViewById(R.id.img_check10);
-
-        // Day 하나 전체 암기 완료 시 체크버튼 바꾸기
-        for( int i=start ; i < 20; i++) { // 단어 20개씩 보여주므로 20번 확인
-            if (Start_App.complete[i] == 0){
-                ++check;
+        // reset버튼 누르면 암기 완료 여부 complete 배열 초기와
+        if (flag_reset == true)
+            for (int i=0; i<200; i++) {
+                Start_App.complete[i] = i + 1;
             }
-        }
-
-        if(check==20){
-            switch (start){
-                case 0:
-                    imageView1.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 20:
-                    imageView2.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 40:
-                    imageView3.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 60:
-                    imageView4.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 80:
-                    imageView5.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 100:
-                    imageView6.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 120:
-                    imageView7.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 140:
-                    imageView8.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 160:
-                    imageView9.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-                case 180:
-                    imageView10.setImageResource(R.drawable.check_blue); // 파란 체크로 변경
-                    break;
-
-            }
-        }
-        else imageView1.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
-    }
-
-    private void init_array(int[] arr){
-        for (int i=0; i<200; i++){
-            arr[i]=i+1;
-        }
     }
 }
