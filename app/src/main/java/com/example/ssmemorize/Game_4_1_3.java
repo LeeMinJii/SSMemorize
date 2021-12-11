@@ -67,8 +67,28 @@ public class Game_4_1_3 extends AppCompatActivity {
             }
         });
 
-        //DB 불러오기
+        // 영단어 유형에 따라 DB 불러오기
         wordList = init_Load_ElementaryDB();
+        switch (Game_4_1.flag_wordtype_game){
+            case 1: // 초등 영단어
+                wordList = init_Load_ElementaryDB();
+                break;
+            case 2: // 중학 영단어
+                wordList = init_Load_MiddleDB();
+                break;
+            case 3: // 수능 영단어
+                wordList = init_Load_SAT_DB();
+                break;
+            case 4: // 토익 영단어
+                wordList = init_Load_TOEIC_DB();
+                break;
+            case 5: // 여행 영단어
+                wordList = init_Load_TRAVEL_DB();
+                break;
+            case 6: // 비지니스 영단어
+                wordList = init_Load_BUSINESS_DB();
+                break;
+        }
 
         //랜덤으로 문제 20개 뽑아서 배열에 저장
         Random rand1 = new Random();
@@ -154,6 +174,66 @@ public class Game_4_1_3 extends AppCompatActivity {
         Log.e("test", String.valueOf(wordList.size()));
 
         DBHelper_ELE.close();
+        return wordList;
+    }
+
+    // Load DataBase - middle word
+    private ArrayList<Word> init_Load_MiddleDB() {
+        DBHelper_MID DBHelper_MID = new DBHelper_MID(getApplicationContext());
+        DBHelper_MID.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_MID.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_MID.close();
+        return wordList;
+    }
+
+    // Load DataBase - sat word
+    private ArrayList<Word> init_Load_SAT_DB() {
+        DBHelper_SAT DBHelper_SAT = new DBHelper_SAT(getApplicationContext());
+        DBHelper_SAT.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_SAT.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_SAT.close();
+        return wordList;
+    }
+
+    // Load DataBase - TOEIC word
+    private ArrayList<Word> init_Load_TOEIC_DB() {
+        DBHelper_TOEIC DBHelper_TOEIC = new DBHelper_TOEIC(getApplicationContext());
+        DBHelper_TOEIC.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_TOEIC.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_TOEIC.close();
+        return wordList;
+    }
+
+    // Load DataBase - TRAVEL word
+    private ArrayList<Word> init_Load_TRAVEL_DB() {
+        DBHelper_TRAVEL DBHelper_TRAVEL = new DBHelper_TRAVEL(getApplicationContext());
+        DBHelper_TRAVEL.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_TRAVEL.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_TRAVEL.close();
+        return wordList;
+    }
+
+    // Load DataBase - BUSINESS word
+    private ArrayList<Word> init_Load_BUSINESS_DB() {
+        DBHelper_BUSINESS DBHelper_BUSINESS = new DBHelper_BUSINESS(getApplicationContext());
+        DBHelper_BUSINESS.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_BUSINESS.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_BUSINESS.close();
         return wordList;
     }
 
