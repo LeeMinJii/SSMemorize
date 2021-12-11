@@ -103,7 +103,8 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
             }
         });
 
