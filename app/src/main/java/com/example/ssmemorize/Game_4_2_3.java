@@ -20,11 +20,10 @@ import java.util.Random;
 public class Game_4_2_3 extends AppCompatActivity {
     public static ArrayList<Elementary> elementaryList;
 
-    public static int count2;   //몇 번째 문제인지
-    public static int correct2;  //맞은 문제 개수
     public static int Wcursor2;    //출력할 단어 번호
 
     int[] question2 = new int[10];   //랜덤으로 뽑은 문제 단어 번호
+    static int[] check2 = new int[2];  //count, correct 저장
 
     public static String word_question2;
     public static String answer2;   //입력한 답
@@ -44,8 +43,8 @@ public class Game_4_2_3 extends AppCompatActivity {
         btn_answer_end = findViewById(R.id.btn_answer_end);
         editText = (EditText) findViewById(R.id.game2_answer);
 
-        count2=0;
-        correct2=0;
+        check2[0] = 0;
+        check2[1] = 0;
         Wcursor2=-1;
 
         // 타이틀바 없애기
@@ -84,12 +83,12 @@ public class Game_4_2_3 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                count2++;
+                check2[0]=check2[0]+1;
                 answer2 = editText.getText().toString();
 //                answer2 = ((EditText)findViewById(R.id.game2_answer)).getText().toString();
 
                 if(answer2.equals(elementaryList.get(Wcursor2).english)){
-                    correct2++;
+                    check2[1]=check2[1]+1;
                     Toast.makeText(Game_4_2_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
                 }
                 else
@@ -115,7 +114,7 @@ public class Game_4_2_3 extends AppCompatActivity {
     //새 문제 설정
     public void newQuestion2(){
         //10문제 다 풀면 점수 화면으로
-        if(count2==10){
+        if(check2[0]==2){
             Intent intent = new Intent(getApplicationContext(), Game_4_4.class);
             startActivity(intent);
         }
@@ -123,7 +122,7 @@ public class Game_4_2_3 extends AppCompatActivity {
         editText.setText(null);
 
         //문제(한글) 띄우기
-        Wcursor2 = question2[count2];
+        Wcursor2 = question2[check2[0]];
         word_question2 = elementaryList.get(Wcursor2).korean;
         tv_game2_word.setText(word_question2);
     }

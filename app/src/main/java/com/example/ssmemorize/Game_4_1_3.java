@@ -19,13 +19,12 @@ public class Game_4_1_3 extends AppCompatActivity {
 
     public static ArrayList<Elementary> elementaryList;
 
-    public static int count1; //몇 번째 문제인지
-    public static int correct1;  //맞은 문제 개수
-    public static int Wcursor1;    //출력할 단어 번호
+    public static int Wcursor1;   //출력할 단어 번호
     public static int answer;   //정답 선택지 번호
 
     int[] question1 = new int[20];   //랜덤으로 뽑은 문제 단어 번호
     int[] content = new int[3];  //랜덤으로 뽑은 선택지 단어 번호
+    static int[] check1 = new int[2];  //count, correct 저장
     
     public static String word_question1;
     public static String content1;
@@ -51,8 +50,8 @@ public class Game_4_1_3 extends AppCompatActivity {
         btn_game1_content3 = findViewById(R.id.btn_game1_content3);
         btn_game1_content4 = findViewById(R.id.btn_game1_content4);
 
-        count1=0;
-        correct1=0;
+        check1[0] = 0;
+        check1[1] = 0;
         Wcursor1=-1;
 
         // 타이틀바 없애기
@@ -91,9 +90,9 @@ public class Game_4_1_3 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                count1++;
+                check1[0]=check1[0]+1;
                 if(answer==0) {
-                    correct1++;
+                    check1[1]=check1[1]+1;
                     Toast.makeText(Game_4_1_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
                 }
                 else
@@ -105,9 +104,9 @@ public class Game_4_1_3 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                count1++;
+                check1[0]=check1[0]+1;
                 if(answer==1) {
-                    correct1++;
+                    check1[1]=check1[1]+1;
                     Toast.makeText(Game_4_1_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
                 }
                 else
@@ -119,9 +118,9 @@ public class Game_4_1_3 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                count1++;
+                check1[0]=check1[0]+1;
                 if(answer==2) {
-                    correct1++;
+                    check1[1]=check1[1]+1;
                     Toast.makeText(Game_4_1_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
                 }
                 else
@@ -133,9 +132,9 @@ public class Game_4_1_3 extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                count1++;
+                check1[0]=check1[0]+1;
                 if(answer==3) {
-                    correct1++;
+                    check1[1]=check1[1]+1;
                     Toast.makeText(Game_4_1_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
                 }
                 else
@@ -161,13 +160,13 @@ public class Game_4_1_3 extends AppCompatActivity {
 //    새 문제 설정
     public void newQuestion1(){
         //20문제 다 풀면 점수 화면으로
-        if(count1==20){
+        if(check1[0]==3){
             Intent intent = new Intent(getApplicationContext(), Game_4_1_4.class);
             startActivity(intent);
         }
 
         //문제(한글) 띄우기
-        Wcursor1 = question1[count1];
+        Wcursor1 = question1[check1[0]];
         word_question1 = elementaryList.get(Wcursor1).korean;
         tv_game1_word.setText(word_question1);
 
@@ -179,7 +178,7 @@ public class Game_4_1_3 extends AppCompatActivity {
         for(int j=0; j<3;j++){
             Random rand3 = new Random();
             content[j] = rand3.nextInt(200);
-            if(content[j]!=question1[count1]){
+            if(content[j]!=question1[check1[0]]){
                 for(int k=0; k<j;k++){
                     if(content[j]==content[k]){
                         j--;

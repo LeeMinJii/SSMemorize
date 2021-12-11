@@ -9,13 +9,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
 
 public class Game_4_1_4 extends AppCompatActivity {
+
+    public static int score1;
+    TextView tv_game1_score;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game414);
+
+        tv_game1_score = findViewById(R.id.tv_game1_score);
+
 
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
@@ -40,5 +47,15 @@ public class Game_4_1_4 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        show_score();
+    }
+
+
+    //점수 띄우기
+    public void show_score(){
+        score1 = 20*(Game_4_1_3.check1[1]);
+
+        tv_game1_score.setText("총 점수 : "+score1+"점");
     }
 }
