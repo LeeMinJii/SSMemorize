@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,7 +18,7 @@ public class Game_4_3_3 extends AppCompatActivity {
     //TextView english_card;
     //TextView tv_english;
 
-    public static ArrayList<Elementary> elementaryList;
+    public static ArrayList<Word> wordList;
 
     public static int temp1 = -1;
     public static int temp2 = -1;
@@ -41,7 +40,7 @@ public class Game_4_3_3 extends AppCompatActivity {
         actionBar.hide();
 
         // DB 불러오기
-        elementaryList = init_Load_ElementaryDB();
+        wordList = init_Load_ElementaryDB();
 
         //랜덤 함수 커서에 집어넣기(8번)
         //1
@@ -54,10 +53,10 @@ public class Game_4_3_3 extends AppCompatActivity {
         Button english_card = findViewById(R.id.tv_card_eng1);
         Button korean_card = findViewById(R.id.tv_card_kor7);
 
-        String word_eng = elementaryList.get(Memorize_3_3.Wcursor).english;
+        String word_eng = wordList.get(Memorize_3_3.Wcursor).english;
         english_card.setText(word_eng);
 
-        String word_kor = elementaryList.get(Memorize_3_3.Wcursor).korean;
+        String word_kor = wordList.get(Memorize_3_3.Wcursor).korean;
         korean_card.setText(word_kor);
 
 
@@ -70,10 +69,10 @@ public class Game_4_3_3 extends AppCompatActivity {
         english_card = findViewById(R.id.tv_card_eng2);
         korean_card = findViewById(R.id.tv_card_kor5);
 
-        word_eng = elementaryList.get(Memorize_3_3.Wcursor).english;
+        word_eng = wordList.get(Memorize_3_3.Wcursor).english;
         english_card.setText(word_eng);
 
-        word_kor = elementaryList.get(Memorize_3_3.Wcursor).korean;
+        word_kor = wordList.get(Memorize_3_3.Wcursor).korean;
         korean_card.setText(word_kor);
 
 
@@ -86,10 +85,10 @@ public class Game_4_3_3 extends AppCompatActivity {
         english_card = findViewById(R.id.tv_card_eng3);
         korean_card = findViewById(R.id.tv_card_kor1);
 
-        word_eng = elementaryList.get(Memorize_3_3.Wcursor).english;
+        word_eng = wordList.get(Memorize_3_3.Wcursor).english;
         english_card.setText(word_eng);
 
-        word_kor = elementaryList.get(Memorize_3_3.Wcursor).korean;
+        word_kor = wordList.get(Memorize_3_3.Wcursor).korean;
         korean_card.setText(word_kor);
 
 
@@ -102,10 +101,10 @@ public class Game_4_3_3 extends AppCompatActivity {
         english_card = findViewById(R.id.tv_card_eng4);
         korean_card = findViewById(R.id.tv_card_kor8);
 
-        word_eng = elementaryList.get(Memorize_3_3.Wcursor).english;
+        word_eng = wordList.get(Memorize_3_3.Wcursor).english;
         english_card.setText(word_eng);
 
-        word_kor = elementaryList.get(Memorize_3_3.Wcursor).korean;
+        word_kor = wordList.get(Memorize_3_3.Wcursor).korean;
         korean_card.setText(word_kor);
 
 
@@ -118,10 +117,10 @@ public class Game_4_3_3 extends AppCompatActivity {
         english_card = findViewById(R.id.tv_card_eng5);
         korean_card = findViewById(R.id.tv_card_kor2);
 
-        word_eng = elementaryList.get(Memorize_3_3.Wcursor).english;
+        word_eng = wordList.get(Memorize_3_3.Wcursor).english;
         english_card.setText(word_eng);
 
-        word_kor = elementaryList.get(Memorize_3_3.Wcursor).korean;
+        word_kor = wordList.get(Memorize_3_3.Wcursor).korean;
         korean_card.setText(word_kor);
 
 
@@ -134,10 +133,10 @@ public class Game_4_3_3 extends AppCompatActivity {
         english_card = findViewById(R.id.tv_card_eng6);
         korean_card = findViewById(R.id.tv_card_kor4);
 
-        word_eng = elementaryList.get(Memorize_3_3.Wcursor).english;
+        word_eng = wordList.get(Memorize_3_3.Wcursor).english;
         english_card.setText(word_eng);
 
-        word_kor = elementaryList.get(Memorize_3_3.Wcursor).korean;
+        word_kor = wordList.get(Memorize_3_3.Wcursor).korean;
         korean_card.setText(word_kor);
 
 
@@ -150,10 +149,10 @@ public class Game_4_3_3 extends AppCompatActivity {
         english_card = findViewById(R.id.tv_card_eng7);
         korean_card = findViewById(R.id.tv_card_kor3);
 
-        word_eng = elementaryList.get(Memorize_3_3.Wcursor).english;
+        word_eng = wordList.get(Memorize_3_3.Wcursor).english;
         english_card.setText(word_eng);
 
-        word_kor = elementaryList.get(Memorize_3_3.Wcursor).korean;
+        word_kor = wordList.get(Memorize_3_3.Wcursor).korean;
         korean_card.setText(word_kor);
 
 
@@ -166,10 +165,10 @@ public class Game_4_3_3 extends AppCompatActivity {
         english_card = findViewById(R.id.tv_card_eng8);
         korean_card = findViewById(R.id.tv_card_kor6);
 
-        word_eng = elementaryList.get(Memorize_3_3.Wcursor).english;
+        word_eng = wordList.get(Memorize_3_3.Wcursor).english;
         english_card.setText(word_eng);
 
-        word_kor = elementaryList.get(Memorize_3_3.Wcursor).korean;
+        word_kor = wordList.get(Memorize_3_3.Wcursor).korean;
         korean_card.setText(word_kor);
 
     }
@@ -400,14 +399,14 @@ public class Game_4_3_3 extends AppCompatActivity {
 
 
     // Load DataBase
-    private ArrayList<Elementary> init_Load_ElementaryDB() {
-        DBHelper DBHelper = new DBHelper(getApplicationContext());
-        DBHelper.OpenDatabaseFile();
+    private ArrayList<Word> init_Load_ElementaryDB() {
+        DBHelper_ELE DBHelper_ELE = new DBHelper_ELE(getApplicationContext());
+        DBHelper_ELE.OpenDatabaseFile();
 
-        ArrayList<Elementary> elementaryList =  DBHelper.getTableData();
-        Log.e("test", String.valueOf(elementaryList.size()));
+        ArrayList<Word> wordList =  DBHelper_ELE.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
 
-        DBHelper.close();
-        return elementaryList;
+        DBHelper_ELE.close();
+        return wordList;
     }
 }

@@ -1,22 +1,14 @@
 package com.example.ssmemorize;
 
-import androidx.annotation.ContentView;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.CheckBox;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -33,23 +25,39 @@ public class Memorize_3_3 extends AppCompatActivity {
     // FrameLayout TextView 선언
     TextView tv_english;
     TextView tv_korean;
-    // FrameLayout ImageView 선언
+    // 암기 여부
     ImageView iv_complete;
     TextView tv_complete;
 
-    public static ArrayList<Elementary> elementaryList;
-    //public static ArrayList<Elementary> myword_elementaryList; // 내 단어장 리스트
-
-    String MyWord_kor; // 내 단어장에 추가
-    String MyWord_eng;
+    public static ArrayList<Word> wordList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memorize33);
 
-        // DB 불러오기
-        elementaryList = init_Load_ElementaryDB();
+        // 영단어 유형에 따라 DB 불러오기
+        wordList = init_Load_ElementaryDB();
+        switch (Memorize_3_main.flag_wordtype){
+            case 1: // 초등 영단어
+                wordList = init_Load_ElementaryDB();
+                break;
+            case 2: // 중학 영단어
+                wordList = init_Load_MiddleDB();
+                break;
+            case 3: // 수능 영단어
+                wordList = init_Load_SAT_DB();
+                break;
+            case 4: // 토익 영단어
+                wordList = init_Load_TOEIC_DB();
+                break;
+            case 5: // 여행 영단어
+                wordList = init_Load_TRAVEL_DB();
+                break;
+            case 6: // 비지니스 영단어
+                wordList = init_Load_BUSINESS_DB();
+                break;
+        }
 
         tv_english = findViewById(R.id.tv_word_eng);
         tv_korean = findViewById(R.id.tv_word_kor);
@@ -106,10 +114,10 @@ public class Memorize_3_3 extends AppCompatActivity {
                 break;
         }
 
-        String word_eng = elementaryList.get(Wcursor).english; // Day xx의 첫번째 단어 띄우기
+        String word_eng = wordList.get(Wcursor).english; // Day xx의 첫번째 단어 띄우기
         tv_english.setText(word_eng);
 
-        String word_kor = elementaryList.get(Wcursor).korean; // Day xx의 첫번째 단어 띄우기
+        String word_kor = wordList.get(Wcursor).korean; // Day xx의 첫번째 단어 띄우기
         tv_korean.setText(word_kor);
 
         // 첫 화면에 완료/미완료 조정
@@ -133,17 +141,76 @@ public class Memorize_3_3 extends AppCompatActivity {
         }); */
     }
 
+    // Load DataBase - elementary word
+    private ArrayList<Word> init_Load_ElementaryDB() {
+        DBHelper_ELE DBHelper_ELE = new DBHelper_ELE(getApplicationContext());
+        DBHelper_ELE.OpenDatabaseFile();
 
-    // Load DataBase
-    private ArrayList<Elementary> init_Load_ElementaryDB() {
-        DBHelper DBHelper = new DBHelper(getApplicationContext());
-        DBHelper.OpenDatabaseFile();
+        ArrayList<Word> wordList =  DBHelper_ELE.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
 
-        ArrayList<Elementary> elementaryList =  DBHelper.getTableData();
-        Log.e("test", String.valueOf(elementaryList.size()));
+        DBHelper_ELE.close();
+        return wordList;
+    }
 
-        DBHelper.close();
-        return elementaryList;
+    // Load DataBase - middle word
+    private ArrayList<Word> init_Load_MiddleDB() {
+        DBHelper_MID DBHelper_MID = new DBHelper_MID(getApplicationContext());
+        DBHelper_MID.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_MID.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_MID.close();
+        return wordList;
+    }
+
+    // Load DataBase - sat word
+    private ArrayList<Word> init_Load_SAT_DB() {
+        DBHelper_SAT DBHelper_SAT = new DBHelper_SAT(getApplicationContext());
+        DBHelper_SAT.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_SAT.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_SAT.close();
+        return wordList;
+    }
+
+    // Load DataBase - TOEIC word
+    private ArrayList<Word> init_Load_TOEIC_DB() {
+        DBHelper_TOEIC DBHelper_TOEIC = new DBHelper_TOEIC(getApplicationContext());
+        DBHelper_TOEIC.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_TOEIC.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_TOEIC.close();
+        return wordList;
+    }
+
+    // Load DataBase - TRAVEL word
+    private ArrayList<Word> init_Load_TRAVEL_DB() {
+        DBHelper_TRAVEL DBHelper_TRAVEL = new DBHelper_TRAVEL(getApplicationContext());
+        DBHelper_TRAVEL.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_TRAVEL.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_TRAVEL.close();
+        return wordList;
+    }
+
+    // Load DataBase - BUSINESS word
+    private ArrayList<Word> init_Load_BUSINESS_DB() {
+        DBHelper_BUSINESS DBHelper_BUSINESS = new DBHelper_BUSINESS(getApplicationContext());
+        DBHelper_BUSINESS.OpenDatabaseFile();
+
+        ArrayList<Word> wordList =  DBHelper_BUSINESS.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
+
+        DBHelper_BUSINESS.close();
+        return wordList;
     }
 
     public void onBtnCompleteCliked(View view){
@@ -191,10 +258,10 @@ public class Memorize_3_3 extends AppCompatActivity {
         tv_korean = findViewById(R.id.tv_word_kor);
 
         // Day xx에 따라 위에서 초기화한 WCursor번째의 데이터 가져오기
-        String word_eng = elementaryList.get(Wcursor).english;
+        String word_eng = wordList.get(Wcursor).english;
         tv_english.setText(word_eng);
 
-        String word_kor = elementaryList.get(Wcursor).korean;
+        String word_kor = wordList.get(Wcursor).korean;
         tv_korean.setText(word_kor);
     }
     // btn_prev 클릭 시 이전 단어로 돌아가기
@@ -204,19 +271,15 @@ public class Memorize_3_3 extends AppCompatActivity {
 
         // 다음 단어 볼 떄 암기 완료/미완료 상태 띄우기
         changeCompleteView();
-        /*  클릭해야 바뀌니까 클릭안해도 바뀌게해야함
-        // 처음 단어에는 이전 버튼 안뜨게
-        Button btn_prev = findViewById(R.id.btn_prev);
-        if (index==1){
-            btn_prev.setVisibility(View.INVISIBLE);
-        }
 
-        // 0번째 이하는 안뜨도록 1일때 버튼 비활성화
+        /*  클릭해야 바뀌니까 클릭안해도 바뀌게해야함
+        /*
+        // Day별 첫 화면에는 이전 버튼 비활성화
         Button btn_prev = findViewById(R.id.btn_prev);
-        if(index == 1 ){
-            btn_prev.setEnabled(false);
-        }
-        else btn_prev.setEnabled(true);*/
+        if (Wcursor%10 == 0) // 10으로 나눈 나머지가 0이면 이전버튼 비활성화 0 , 20 , 30...
+            btn_prev.setVisibility(View.INVISIBLE);
+            //btn_prev.setEnabled(false);
+        else btn_prev.setVisibility(View.VISIBLE);//btn_prev.setEnabled(true)*/
 
         // 텍스트뷰 띄우기
         tv_word_num = findViewById(R.id.word_num);
@@ -226,10 +289,10 @@ public class Memorize_3_3 extends AppCompatActivity {
         tv_korean = findViewById(R.id.tv_word_kor);
 
         // WCursor번째의 데이터 가져오기
-        String word_eng = elementaryList.get(Wcursor).english;
+        String word_eng = wordList.get(Wcursor).english;
         tv_english.setText(word_eng);
 
-        String word_kor = elementaryList.get(Wcursor).korean;
+        String word_kor = wordList.get(Wcursor).korean;
         tv_korean.setText(word_kor);
     }
 

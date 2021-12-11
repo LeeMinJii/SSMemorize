@@ -184,6 +184,18 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
     // start 버튼 클릭 시 Day xx 텍스트뷰  flag 주기, 화면전환
     @Override
     public void onClick(View view) {
+        // reset -> 체크 바꾸기 위한 이미지뷰
+        ImageView imageView1 = findViewById(R.id.img_check1);
+        ImageView imageView2 = findViewById(R.id.img_check2);
+        ImageView imageView3 = findViewById(R.id.img_check3);
+        ImageView imageView4 = findViewById(R.id.img_check4);
+        ImageView imageView5 = findViewById(R.id.img_check5);
+        ImageView imageView6 = findViewById(R.id.img_check6);
+        ImageView imageView7 = findViewById(R.id.img_check7);
+        ImageView imageView8 = findViewById(R.id.img_check8);
+        ImageView imageView9 = findViewById(R.id.img_check9);
+        ImageView imageView10 = findViewById(R.id.img_check10);
+
         Intent intent = new Intent(getApplicationContext(), Memorize_3_3.class);
         switch (view.getId()) {
             case R.id.btn_start_study1:
@@ -235,16 +247,44 @@ public class Memorize_3_2 extends AppCompatActivity implements View.OnClickListe
                 start = 180;
                 startActivity(intent);
                 break;
-            case R.id.reset1:
+            case R.id.reset1:  // reset
+                imageView1.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset2:
+                imageView2.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset3:
+                imageView3.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset4:
+                imageView4.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset5:
+                imageView5.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset6:
+                imageView6.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset7:
+                imageView7.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset8:
+                imageView8.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset9:
+                imageView9.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
+                flag_reset = true;
+                break;
             case R.id.reset10:
+                imageView10.setImageResource(R.drawable.check); // 20이 안되는 경우 회색체크 띄우기
                 flag_reset = true;
                 break;
         }

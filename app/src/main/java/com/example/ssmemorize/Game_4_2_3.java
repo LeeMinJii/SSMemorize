@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Game_4_2_3 extends AppCompatActivity {
-    public static ArrayList<Elementary> elementaryList;
+    public static ArrayList<Word> wordList;
 
     public static int Wcursor2;    //출력할 단어 번호
 
@@ -61,7 +60,7 @@ public class Game_4_2_3 extends AppCompatActivity {
         });
 
         //DB 불러오기
-        elementaryList = init_Load_ElementaryDB();
+        wordList = init_Load_ElementaryDB();
 
         //랜덤으로 문제 10개 뽑아서 배열에 저장
         Random rand1 = new Random();
@@ -87,7 +86,7 @@ public class Game_4_2_3 extends AppCompatActivity {
                 answer2 = editText.getText().toString();
 //                answer2 = ((EditText)findViewById(R.id.game2_answer)).getText().toString();
 
-                if(answer2.equals(elementaryList.get(Wcursor2).english)){
+                if(answer2.equals(wordList.get(Wcursor2).english)){
                     check2[1]=check2[1]+1;
                     Toast.makeText(Game_4_2_3.this,"정답입니다.", Toast.LENGTH_SHORT).show();
                 }
@@ -100,15 +99,15 @@ public class Game_4_2_3 extends AppCompatActivity {
 
 
     //Load DataBase
-    private ArrayList<Elementary> init_Load_ElementaryDB() {
-        DBHelper DBHelper = new DBHelper(getApplicationContext());
-        DBHelper.OpenDatabaseFile();
+    private ArrayList<Word> init_Load_ElementaryDB() {
+        DBHelper_ELE DBHelper_ELE = new DBHelper_ELE(getApplicationContext());
+        DBHelper_ELE.OpenDatabaseFile();
 
-        ArrayList<Elementary> elementaryList =  DBHelper.getTableData();
-        Log.e("test", String.valueOf(elementaryList.size()));
+        ArrayList<Word> wordList =  DBHelper_ELE.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
 
-        DBHelper.close();
-        return elementaryList;
+        DBHelper_ELE.close();
+        return wordList;
     }
 
     //새 문제 설정
@@ -123,7 +122,7 @@ public class Game_4_2_3 extends AppCompatActivity {
 
         //문제(한글) 띄우기
         Wcursor2 = question2[check2[0]];
-        word_question2 = elementaryList.get(Wcursor2).korean;
+        word_question2 = wordList.get(Wcursor2).korean;
         tv_game2_word.setText(word_question2);
     }
 }

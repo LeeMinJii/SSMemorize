@@ -1,13 +1,11 @@
 package com.example.ssmemorize;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
-import android.widget.TextView;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -15,22 +13,20 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.List;
 //private static String ele_word ="/data/data/com.example.test/databases/"; // Database name
 
-public class DBHelper extends SQLiteOpenHelper {
+public class DBHelper_TOEIC extends SQLiteOpenHelper {
     public static int DATABASE_VERSION = 1;
     private static String TAG = "DBHelper";
-    //private static String wordDB = "ele_word.db";
 
     private static String databasePath = "/data/data/com.example.ssmemorize/databases/"; // 데이터베이스 경로
-    private static String databaseName = "elementary_Word.db"; // 데이터베이스 이름
-    private static String tableName = "elementary_Word"; // 테이블 이름
+    private static String databaseName = "toeic_Word.db"; // 데이터베이스 이름
+    private static String tableName = "toeic_Word"; // 테이블 이름
 
     public static SQLiteDatabase mDataBase;
     private final Context mContext;
 
-    public DBHelper(Context context) {
+    public DBHelper_TOEIC(Context context) {
         super(context, "databaseName", null, DATABASE_VERSION);
         this.mContext = context;
     }
@@ -99,11 +95,11 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
 
-    public ArrayList<Elementary> getTableData() {
+    public ArrayList<Word> getTableData() {
 
         try {
             // 테이블 정보 저장 List
-            ArrayList<Elementary> mList = new ArrayList<Elementary>();
+            ArrayList<Word> mList = new ArrayList<Word>();
 
             // 쿼리
             String sql = "SELECT * FROM " + tableName;
@@ -116,13 +112,13 @@ public class DBHelper extends SQLiteOpenHelper {
                 // 다음 row(행)으로 이동
                 while (mCursor.moveToNext()) {
                     // 해당 row에 저장
-                    Elementary elementary = new Elementary();
-                    elementary.setId(mCursor.getInt(0));
-                    elementary.setEnglish(mCursor.getString(1));
-                    elementary.setKorean(mCursor.getString(2));
+                    Word word = new Word();
+                    word.setId(mCursor.getInt(0));
+                    word.setEnglish(mCursor.getString(1));
+                    word.setKorean(mCursor.getString(2));
 
                     // List에 해당 row 추가
-                    mList.add(elementary);
+                    mList.add(word);
                 }
             }
             return mList;

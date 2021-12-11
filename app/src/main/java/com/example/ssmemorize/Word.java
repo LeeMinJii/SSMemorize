@@ -1,6 +1,6 @@
 package com.example.ssmemorize;
 
-public class Elementary {
+public class Word {
 
     public int _id;
     public String english;

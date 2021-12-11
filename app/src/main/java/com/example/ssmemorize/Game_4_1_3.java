@@ -17,7 +17,7 @@ import java.util.Random;
 
 public class Game_4_1_3 extends AppCompatActivity {
 
-    public static ArrayList<Elementary> elementaryList;
+    public static ArrayList<Word> wordList;
 
     public static int Wcursor1;   //출력할 단어 번호
     public static int answer;   //정답 선택지 번호
@@ -68,7 +68,7 @@ public class Game_4_1_3 extends AppCompatActivity {
         });
 
         //DB 불러오기
-        elementaryList = init_Load_ElementaryDB();
+        wordList = init_Load_ElementaryDB();
 
         //랜덤으로 문제 20개 뽑아서 배열에 저장
         Random rand1 = new Random();
@@ -146,15 +146,15 @@ public class Game_4_1_3 extends AppCompatActivity {
     }
 
     //Load DataBase
-    private ArrayList<Elementary> init_Load_ElementaryDB() {
-        DBHelper DBHelper = new DBHelper(getApplicationContext());
-        DBHelper.OpenDatabaseFile();
+    private ArrayList<Word> init_Load_ElementaryDB() {
+        DBHelper_ELE DBHelper_ELE = new DBHelper_ELE(getApplicationContext());
+        DBHelper_ELE.OpenDatabaseFile();
 
-        ArrayList<Elementary> elementaryList =  DBHelper.getTableData();
-        Log.e("test", String.valueOf(elementaryList.size()));
+        ArrayList<Word> wordList =  DBHelper_ELE.getTableData();
+        Log.e("test", String.valueOf(wordList.size()));
 
-        DBHelper.close();
-        return elementaryList;
+        DBHelper_ELE.close();
+        return wordList;
     }
 
 //    새 문제 설정
@@ -167,7 +167,7 @@ public class Game_4_1_3 extends AppCompatActivity {
 
         //문제(한글) 띄우기
         Wcursor1 = question1[check1[0]];
-        word_question1 = elementaryList.get(Wcursor1).korean;
+        word_question1 = wordList.get(Wcursor1).korean;
         tv_game1_word.setText(word_question1);
 
         //정답 선택지 번호 결정
@@ -192,10 +192,10 @@ public class Game_4_1_3 extends AppCompatActivity {
 
         //선택지 띄우기
         if(answer==0){
-            content1 = elementaryList.get(Wcursor1).english;
-            content2 = elementaryList.get(content[0]).english;
-            content3 = elementaryList.get(content[1]).english;
-            content4 = elementaryList.get(content[2]).english;
+            content1 = wordList.get(Wcursor1).english;
+            content2 = wordList.get(content[0]).english;
+            content3 = wordList.get(content[1]).english;
+            content4 = wordList.get(content[2]).english;
 
             btn_game1_content1.setText(content1);
             btn_game1_content2.setText(content2);
@@ -204,10 +204,10 @@ public class Game_4_1_3 extends AppCompatActivity {
 
         }
         else if(answer==1){
-            content1 = elementaryList.get(content[0]).english;
-            content2 = elementaryList.get(Wcursor1).english;
-            content3 = elementaryList.get(content[1]).english;
-            content4 = elementaryList.get(content[2]).english;
+            content1 = wordList.get(content[0]).english;
+            content2 = wordList.get(Wcursor1).english;
+            content3 = wordList.get(content[1]).english;
+            content4 = wordList.get(content[2]).english;
 
             btn_game1_content1.setText(content1);
             btn_game1_content2.setText(content2);
@@ -215,10 +215,10 @@ public class Game_4_1_3 extends AppCompatActivity {
             btn_game1_content4.setText(content4);
         }
         else if(answer==2){
-            content1 = elementaryList.get(content[0]).english;
-            content2 = elementaryList.get(content[1]).english;
-            content3 = elementaryList.get(Wcursor1).english;
-            content4 = elementaryList.get(content[2]).english;
+            content1 = wordList.get(content[0]).english;
+            content2 = wordList.get(content[1]).english;
+            content3 = wordList.get(Wcursor1).english;
+            content4 = wordList.get(content[2]).english;
 
             btn_game1_content1.setText(content1);
             btn_game1_content2.setText(content2);
@@ -226,10 +226,10 @@ public class Game_4_1_3 extends AppCompatActivity {
             btn_game1_content4.setText(content4);
         }
         else if(answer==3){
-            content1 = elementaryList.get(content[0]).english;
-            content2 = elementaryList.get(content[1]).english;
-            content3 = elementaryList.get(content[2]).english;
-            content4 = elementaryList.get(Wcursor1).english;
+            content1 = wordList.get(content[0]).english;
+            content2 = wordList.get(content[1]).english;
+            content3 = wordList.get(content[2]).english;
+            content4 = wordList.get(Wcursor1).english;
 
             btn_game1_content1.setText(content1);
             btn_game1_content2.setText(content2);
