@@ -8,11 +8,10 @@
     <ImageButton
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/back"
+        android:layout_height="35dp"
         android:background="@color/transparent"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"/>
+        android:layout_marginLeft="15dp" />
 
     <TextView
         android:id="@+id/show_day"
@@ -128,19 +127,35 @@
 
         </LinearLayout>
 
-        <CheckBox
-            android:id="@+id/cb_add_myword"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:text=" 내 단어장에 추가"
-            android:textSize="20dp"
-            android:textColor="@color/dark"
-            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:weightSum="7"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/cafe_air"/>
+            android:layout_marginLeft="24dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/isnotchecked"
+                android:background="@color/transparent"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text=" 내 단어장에 추가"
+                android:layout_gravity="center_vertical"
+                android:textSize="20dp"
+                android:textColor="@color/dark"
+                android:fontFamily="@font/cafe_air"
+                android:clickable="false"/>
+
+        </LinearLayout>
 
         <LinearLayout
             android:id="@+id/Llayout_complete"
