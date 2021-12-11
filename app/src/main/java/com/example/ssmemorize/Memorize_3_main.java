@@ -45,7 +45,29 @@ public class Memorize_3_main extends Fragment implements View.OnClickListener {
 
         btn_study6 = view.findViewById(R.id.btn_study6);
         btn_study6.setOnClickListener(this);
-
+/*
+// 학습률
+        int check=0;
+        int[] memorize = new int[10]; // Day별 암기 완료 여부
+        int k=0;
+        // Day 1-10까지 각 20개의 단어의 암기 완료 여부 체크 -> memorize배열에 넣기
+        for (int i = 0; i <= 180; i+=20){
+            for (int j=0; j<20; j++){
+                if (Start_App.complete[j+i]==0)
+                    check++;
+            }
+            if (check==20) {
+                memorize[k]=0; // 20개 다 암기완료면 0넣기
+                k++;
+                check = 0;
+            }
+            else {
+                memorize[k]=1;
+                k++;
+                check = 0;
+            }
+        }
+*/
         return view;
     }
 
