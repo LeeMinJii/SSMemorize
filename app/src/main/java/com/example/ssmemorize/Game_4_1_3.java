@@ -22,7 +22,7 @@ public class Game_4_1_3 extends AppCompatActivity {
     public static int Wcursor1;   //출력할 단어 번호
     public static int answer;   //정답 선택지 번호
 
-    int[] question1 = new int[20];   //랜덤으로 뽑은 문제 단어 번호
+    int[] question1 = new int[21];   //랜덤으로 뽑은 문제 단어 번호
     int[] content = new int[3];  //랜덤으로 뽑은 선택지 단어 번호
     static int[] check1 = new int[2];  //count, correct 저장
     
@@ -92,7 +92,7 @@ public class Game_4_1_3 extends AppCompatActivity {
 
         //랜덤으로 문제 20개 뽑아서 배열에 저장
         Random rand1 = new Random();
-        for(int i=0; i<20; i++){
+        for(int i=0; i<21; i++){
             question1[i] = rand1.nextInt(200);
             for(int j=0; j<i;j++){
                 if(question1[j]==question1[i]){
@@ -240,11 +240,10 @@ public class Game_4_1_3 extends AppCompatActivity {
 //    새 문제 설정
     public void newQuestion1(){
         //20문제 다 풀면 점수 화면으로
-        if(check1[0]==3){
+        if(check1[0]==20){
             Intent intent = new Intent(getApplicationContext(), Game_4_1_4.class);
             startActivity(intent);
         }
-
         //문제(한글) 띄우기
         Wcursor1 = question1[check1[0]];
         word_question1 = wordList.get(Wcursor1).korean;

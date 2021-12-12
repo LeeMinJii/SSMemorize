@@ -13,7 +13,8 @@ import android.widget.TextView;
 
 public class Game_4_1_4 extends AppCompatActivity {
 
-    public static int score1;
+    public static int[] score1 = new int[1];  //객관식 게임 점수 저장
+    int score11;
     TextView tv_game1_score;
 
     @Override
@@ -49,13 +50,22 @@ public class Game_4_1_4 extends AppCompatActivity {
         });
 
         show_score();
+        game1_high_score();
     }
 
 
     //점수 띄우기
     public void show_score(){
-        score1 = 20*(Game_4_1_3.check1[1]);
+        score1[0] = 5*(Game_4_1_3.check1[1]);
+        score11 = score1[0];
 
-        tv_game1_score.setText("총 점수 : "+score1+"점");
+        tv_game1_score.setText("총 점수 : "+score11+"점");
+    }
+
+    //최고 점수 갱신
+    public void game1_high_score(){
+        if(Game_4_main.game_high_score[0]<score1[0]){
+            Game_4_main.game_high_score[0]=score1[0];
+        }
     }
 }

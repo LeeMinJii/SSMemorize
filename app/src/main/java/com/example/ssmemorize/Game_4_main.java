@@ -13,15 +13,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 public class Game_4_main extends Fragment implements View.OnClickListener{
 
     public static int sig_gametype;
+    public static int[] game_high_score = new int[2];  //게임 최고 점수 저장
 
     private View view;
     Button btn_game1;
     Button btn_game2;
     Button btn_game3;
+
+    TextView game1_high_score;
+    TextView game2_high_score;
 
     @Nullable
     @Override
@@ -37,6 +42,10 @@ public class Game_4_main extends Fragment implements View.OnClickListener{
         btn_game3 = view.findViewById(R.id.game3);
         btn_game3.setOnClickListener(this);
 
+        game1_high_score=view.findViewById(R.id.game1_high_score);
+        game2_high_score=view.findViewById(R.id.game2_high_score);
+
+        show_high_score();
         return view;
     }
     @Override
@@ -55,5 +64,14 @@ public class Game_4_main extends Fragment implements View.OnClickListener{
                 getActivity().startActivity(new Intent(getActivity(), Game_4_1.class));
                 break;
         }
+    }
+
+    //최고 점수 띄우기
+    public void show_high_score(){
+        int high_score1 = game_high_score[0];
+        int high_score2 = game_high_score[1];
+
+        game1_high_score.setText(" 최고기록 : "+high_score1);
+        game2_high_score.setText(" 최고기록 : "+high_score2);
     }
 }

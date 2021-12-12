@@ -21,7 +21,7 @@ public class Game_4_2_3 extends AppCompatActivity {
 
     public static int Wcursor2;    //출력할 단어 번호
 
-    int[] question2 = new int[10];   //랜덤으로 뽑은 문제 단어 번호
+    int[] question2 = new int[11];   //랜덤으로 뽑은 문제 단어 번호
     static int[] check2 = new int[2];  //count, correct 저장
 
     public static String word_question2;
@@ -84,7 +84,7 @@ public class Game_4_2_3 extends AppCompatActivity {
 
         //랜덤으로 문제 10개 뽑아서 배열에 저장
         Random rand1 = new Random();
-        for(int i=0; i<10; i++){
+        for(int i=0; i<11; i++){
             question2[i] = rand1.nextInt(200);
             for(int j=0; j<i;j++){
                 if(question2[j]==question2[i]){
@@ -193,7 +193,7 @@ public class Game_4_2_3 extends AppCompatActivity {
     //새 문제 설정
     public void newQuestion2(){
         //10문제 다 풀면 점수 화면으로
-        if(check2[0]==2){
+        if(check2[0]==10){
             Intent intent = new Intent(getApplicationContext(), Game_4_4.class);
             startActivity(intent);
         }

@@ -46,6 +46,7 @@
             android:fontFamily="@font/cafe_air"/>
 
         <TextView
+            android:id="@+id/game1_high_score"
             android:layout_width="wrap_content"
             android:gravity="center_vertical"
             android:layout_gravity="right"
@@ -74,6 +75,7 @@
             android:fontFamily="@font/cafe_air" />
 
         <TextView
+            android:id="@+id/game2_high_score"
             android:layout_width="wrap_content"
             android:gravity="center_vertical"
             android:layout_gravity="right"
