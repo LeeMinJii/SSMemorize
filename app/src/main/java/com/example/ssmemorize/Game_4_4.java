@@ -33,19 +33,19 @@ public class Game_4_4 extends AppCompatActivity{
         btn_game2_end.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(),Game_4_1.class);
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
             }
         });
 
         //다시 하기 버튼
-        Button btn_game2_re = (Button)findViewById(R.id.btn_game2_end);
+        Button btn_game2_re = (Button)findViewById(R.id.btn_game2_re);
         btn_game2_re.setOnClickListener(new OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                    Intent intent2 = new Intent(getApplicationContext(), Game_4_2_2.class);
-                    startActivity(intent2);
+                    Intent intent = new Intent(getApplicationContext(), Game_4_2_2.class);
+                    startActivity(intent);
             }
 
         });

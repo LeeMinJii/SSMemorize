@@ -21,7 +21,7 @@
             android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="apple"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="#666666"
             android:textColor="@color/white"
@@ -30,10 +30,10 @@
         <Button
             android:id="@+id/tv_card_kor1"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button1"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="@color/white"/>
     </TableRow>
@@ -42,10 +42,10 @@
         <Button
             android:id="@+id/tv_card_kor2"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button2"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="@color/white"/>
 
@@ -55,7 +55,7 @@
             android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button3"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="#666666"
             android:textColor="@color/white"/>
@@ -68,7 +68,7 @@
             android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button4"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="#666666"
             android:textColor="@color/white"/>
@@ -76,10 +76,10 @@
         <Button
             android:id="@+id/tv_card_kor3"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button5"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="@color/white"/>
     </TableRow>
@@ -88,10 +88,10 @@
         <Button
             android:id="@+id/tv_card_kor4"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button6"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="@color/white"/>
 
@@ -101,31 +101,32 @@
             android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button7"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="#666666"
             android:textColor="@color/white"/>
     </TableRow>
 
     <TableRow>
+
         <Button
             android:id="@+id/tv_card_eng5"
             android:layout_width="wrap_content"
             android:layout_height="65dp"
             android:layout_margin="3dp"
-            android:text="Button"
-            android:textSize="18dp"
-            android:fontFamily="@font/cafe"
             android:backgroundTint="#666666"
-            android:textColor="@color/white"/>
+            android:fontFamily="@font/cafe"
+            android:text="Button"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
 
         <Button
             android:id="@+id/tv_card_kor5"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="@color/white"/>
     </TableRow>
@@ -134,10 +135,10 @@
         <Button
             android:id="@+id/tv_card_kor6"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="@color/white"
             android:visibility="visible"/>
@@ -151,7 +152,7 @@
             android:fontFamily="@font/cafe"
             android:text="Button"
             android:textColor="@color/white"
-            android:textSize="18dp" />
+            android:textSize="12dp" />
     </TableRow>
 
     <TableRow>
@@ -161,7 +162,7 @@
             android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="#666666"
             android:textColor="@color/white"/>
@@ -169,10 +170,10 @@
         <Button
             android:id="@+id/tv_card_kor7"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="@color/white"/>
     </TableRow>
@@ -181,10 +182,10 @@
         <Button
             android:id="@+id/tv_card_kor8"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="@color/white"/>
 
@@ -194,7 +195,7 @@
             android:layout_height="65dp"
             android:layout_margin="3dp"
             android:text="Button"
-            android:textSize="18dp"
+            android:textSize="12dp"
             android:fontFamily="@font/cafe"
             android:backgroundTint="#666666"
             android:textColor="@color/white"/>
