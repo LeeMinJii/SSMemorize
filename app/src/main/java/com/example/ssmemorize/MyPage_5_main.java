@@ -18,6 +18,8 @@ public class MyPage_5_main extends Fragment implements View.OnClickListener{
     Button mypage_check;
     Button mypage_myword;
 
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MyPage_5_main extends Fragment implements View.OnClickListener{
 
         return view;
     }
+
 
     // 출석체크, 내 단어장 버튼 클릭시 이동
     @Override

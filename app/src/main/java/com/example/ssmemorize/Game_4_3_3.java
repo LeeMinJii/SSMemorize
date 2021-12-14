@@ -411,6 +411,14 @@ public class Game_4_3_3 extends AppCompatActivity {
 
                 if(count == 8){
                     count = 0;
+                    select = 0;
+                    temp1 = -1;
+                    temp2 = -1;
+                    temp3 = -1;
+
+                    btn_num = 0;
+                    first_btn_num = 0;
+
                     Intent intent = new Intent(getApplicationContext(), Game_4_3_4.class);
                     startActivity(intent);
                 }

@@ -3,6 +3,7 @@ package com.example.ssmemorize;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,10 +25,12 @@ import java.util.regex.Pattern;
 public class SignUp extends AppCompatActivity {
     private FirebaseAuth mAuth;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
 
         // 타이틀바 없애기
         ActionBar actionBar = getSupportActionBar();
