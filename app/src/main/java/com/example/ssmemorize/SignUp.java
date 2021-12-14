@@ -61,27 +61,17 @@ public class SignUp extends AppCompatActivity {
     };
 
 
-
-    private void duplication_check() {
-        String email = ((EditText) findViewById(R.id.user_email)).getText().toString();
-
-        String e_mailPattern = "^[a-zA-Z0-9]+@[a-zA-Z0-9.]+$"; // 이메일 형식 패턴
-        if (!Pattern.matches(e_mailPattern, email)) {
-            Toast.makeText(SignUp.this, "이메일 형식을 확인해주세요", Toast.LENGTH_LONG).show();
-            return;
-        }
-
-
-
-    }
-
-
     private void user_signUp() {
         String name = ((EditText) findViewById(R.id.user_name)).getText().toString();
         String email = ((EditText) findViewById(R.id.user_email)).getText().toString();
         String password = ((EditText) findViewById(R.id.user_password)).getText().toString();
         String passwordCheck = ((EditText) findViewById(R.id.user_password_check)).getText().toString();
 
+        String e_mailPattern = "^[a-zA-Z0-9]+@[a-zA-Z0-9.]+$"; // 이메일 형식 패턴
+        if (!Pattern.matches(e_mailPattern, email)) {
+            Toast.makeText(SignUp.this, "이메일 형식을 확인해주세요", Toast.LENGTH_LONG).show();
+            return;
+        }
 
         if (password.length() < 8 || passwordCheck.length() < 8) { // 최소 비밀번호 사이즈를 맞추기 위해서
             Toast.makeText(this, "비밀번호는 최소 8자리 이상입니다", Toast.LENGTH_SHORT).show();
